@@ -1,0 +1,240 @@
+diff --git a/include/spdk/blob.h b/include/spdk/blob.h
+index fe98215..675de16 100644
+--- a/include/spdk/blob.h
++++ b/include/spdk/blob.h
+@@ -636,6 +636,26 @@ void spdk_bs_create_blob_ext(struct spdk_blob_store *bs, const struct spdk_blob_
+ void spdk_bs_create_blob(struct spdk_blob_store *bs,
+ 			 spdk_blob_op_with_id_complete cb_fn, void *cb_arg);
+ 
++/**
++ * Create a new blob with options on the given blobstore and hand it back open.
++ * The new blob will be passed to the callback function.
++ *
++ * The blob is registered in the blobstore with one reference, which belongs to
++ * the caller and must be returned with spdk_blob_close(). Against a
++ * spdk_bs_create_blob_ext() followed by a spdk_bs_open_blob(), this saves
++ * reading the md page the create has just persisted back from the device.
++ *
++ * External snapshot clones cannot be created this way: opts->esnap_id must be
++ * NULL, otherwise the operation fails with -EINVAL.
++ *
++ * \param bs blobstore.
++ * \param opts The structure which contains the option values for the new blob.
++ * \param cb_fn Called when the operation is complete.
++ * \param cb_arg Argument passed to function cb_fn.
++ */
++void spdk_bs_create_and_open_blob(struct spdk_blob_store *bs, const struct spdk_blob_opts *opts,
++				  spdk_blob_op_with_handle_complete cb_fn, void *cb_arg);
++
+ /**
+  * Create a read-only snapshot of specified blob with provided options.
+  * This will automatically sync specified blob.
+diff --git a/lib/blob/blobstore.c b/lib/blob/blobstore.c
+index d8a5b39..579be6c 100644
+--- a/lib/blob/blobstore.c
++++ b/lib/blob/blobstore.c
+@@ -6261,11 +6261,40 @@ bs_create_blob_cpl(spdk_bs_sequence_t *seq, void *cb_arg, int bserrno)
+ 		spdk_spin_unlock(&blob->bs->used_lock);
+ 	}
+ 
++	if (seq->cpl.type == SPDK_BS_CPL_TYPE_BLOB_HANDLE) {
++		if (bserrno == 0) {
++			/* The caller asked for the blob to be handed back open. Its in-memory
++			 * state is the md image that was just persisted, so registering it here
++			 * spares the caller an spdk_bs_open_blob() that would read that same
++			 * page back from the device. The reference taken here belongs to the
++			 * caller, which returns it with spdk_blob_close().
++			 */
++			blob->open_ref++;
++			spdk_bit_array_set(blob->bs->open_blobids, blob->id);
++			RB_INSERT(spdk_blob_tree, &blob->bs->open_blobs, blob);
++
++			bs_sequence_finish(seq, 0);
++			return;
++		}
++		seq->cpl.u.blob_handle.blob = NULL;
++	}
++
+ 	blob_free(blob);
+ 
+ 	bs_sequence_finish(seq, bserrno);
+ }
+ 
++static void
++bs_create_blob_fail(spdk_blob_op_with_id_complete cb_fn,
++		    spdk_blob_op_with_handle_complete open_cb_fn, void *cb_arg, int bserrno)
++{
++	if (open_cb_fn != NULL) {
++		open_cb_fn(cb_arg, NULL, bserrno);
++	} else {
++		cb_fn(cb_arg, 0, bserrno);
++	}
++}
++
+ static int
+ blob_set_xattrs(struct spdk_blob *blob, const struct spdk_blob_xattr_opts *xattrs,
+ 		bool internal)
+@@ -6327,7 +6356,8 @@ static void
+ bs_create_blob(struct spdk_blob_store *bs,
+ 	       const struct spdk_blob_opts *opts,
+ 	       const struct spdk_blob_xattr_opts *internal_xattrs,
+-	       spdk_blob_op_with_id_complete cb_fn, void *cb_arg)
++	       spdk_blob_op_with_id_complete cb_fn,
++	       spdk_blob_op_with_handle_complete open_cb_fn, void *cb_arg)
+ {
+ 	struct spdk_blob	*blob;
+ 	uint32_t		page_idx;
+@@ -6344,7 +6374,7 @@ bs_create_blob(struct spdk_blob_store *bs,
+ 	page_idx = spdk_bit_array_find_first_clear(bs->used_md_pages, 0);
+ 	if (page_idx == UINT32_MAX) {
+ 		spdk_spin_unlock(&bs->used_lock);
+-		cb_fn(cb_arg, 0, -ENOMEM);
++		bs_create_blob_fail(cb_fn, open_cb_fn, cb_arg, -ENOMEM);
+ 		return;
+ 	}
+ 	spdk_bit_array_set(bs->used_blobids, page_idx);
+@@ -6393,6 +6423,15 @@ bs_create_blob(struct spdk_blob_store *bs,
+ 	blob_set_clear_method(blob, opts_local.clear_method);
+ 
+ 	if (opts_local.esnap_id != NULL) {
++		if (open_cb_fn != NULL) {
++			/* An esnap clone gets its back_bs_dev from blob_load_esnap(), which
++			 * only runs on the open path. A blob handed back open by the create
++			 * never takes that path, so it would come back without one.
++			 */
++			SPDK_ERRLOG("Cannot hand back an esnap clone open at create time\n");
++			rc = -EINVAL;
++			goto error;
++		}
+ 		if (opts_local.esnap_id_len > UINT16_MAX) {
+ 			SPDK_ERRLOG("esnap id length %" PRIu64 "is too long\n",
+ 				    opts_local.esnap_id_len);
+@@ -6413,10 +6452,31 @@ bs_create_blob(struct spdk_blob_store *bs,
+ 	if (rc < 0) {
+ 		goto error;
+ 	}
+-	cpl.type = SPDK_BS_CPL_TYPE_BLOBID;
+-	cpl.u.blobid.cb_fn = cb_fn;
+-	cpl.u.blobid.cb_arg = cb_arg;
+-	cpl.u.blobid.blobid = blob->id;
++
++	if (open_cb_fn != NULL) {
++		if (spdk_blob_is_thin_provisioned(blob)) {
++			/* blob_load_backing_dev() gives a thin blob its zeroes device when it is
++			 * opened from the device; a blob handed back open by the create is never
++			 * loaded, so it is given one here instead.
++			 */
++			blob->back_bs_dev = bs_create_zeroes_dev();
++			if (blob->back_bs_dev == NULL) {
++				rc = -ENOMEM;
++				goto error;
++			}
++		}
++
++		cpl.type = SPDK_BS_CPL_TYPE_BLOB_HANDLE;
++		cpl.u.blob_handle.cb_fn = open_cb_fn;
++		cpl.u.blob_handle.cb_arg = cb_arg;
++		cpl.u.blob_handle.blob = blob;
++		cpl.u.blob_handle.esnap_ctx = NULL;
++	} else {
++		cpl.type = SPDK_BS_CPL_TYPE_BLOBID;
++		cpl.u.blobid.cb_fn = cb_fn;
++		cpl.u.blobid.cb_arg = cb_arg;
++		cpl.u.blobid.blobid = blob->id;
++	}
+ 
+ 	seq = bs_sequence_start_bs(bs->md_channel, &cpl);
+ 	if (!seq) {
+@@ -6437,21 +6497,28 @@ error:
+ 	spdk_bit_array_clear(bs->used_blobids, page_idx);
+ 	bs_release_md_page(bs, page_idx);
+ 	spdk_spin_unlock(&bs->used_lock);
+-	cb_fn(cb_arg, 0, rc);
++	bs_create_blob_fail(cb_fn, open_cb_fn, cb_arg, rc);
+ }
+ 
+ void
+ spdk_bs_create_blob(struct spdk_blob_store *bs,
+ 		    spdk_blob_op_with_id_complete cb_fn, void *cb_arg)
+ {
+-	bs_create_blob(bs, NULL, NULL, cb_fn, cb_arg);
++	bs_create_blob(bs, NULL, NULL, cb_fn, NULL, cb_arg);
+ }
+ 
+ void
+ spdk_bs_create_blob_ext(struct spdk_blob_store *bs, const struct spdk_blob_opts *opts,
+ 			spdk_blob_op_with_id_complete cb_fn, void *cb_arg)
+ {
+-	bs_create_blob(bs, opts, NULL, cb_fn, cb_arg);
++	bs_create_blob(bs, opts, NULL, cb_fn, NULL, cb_arg);
++}
++
++void
++spdk_bs_create_and_open_blob(struct spdk_blob_store *bs, const struct spdk_blob_opts *opts,
++			     spdk_blob_op_with_handle_complete cb_fn, void *cb_arg)
++{
++	bs_create_blob(bs, opts, NULL, NULL, cb_fn, cb_arg);
+ }
+ 
+ /* END spdk_bs_create_blob */
+@@ -6896,7 +6963,7 @@ bs_snapshot_origblob_open_cpl(void *cb_arg, struct spdk_blob *_blob, int bserrno
+ 	internal_xattrs.get_value = bs_xattr_snapshot;
+ 
+ 	bs_create_blob(_blob->bs, &opts, &internal_xattrs,
+-		       bs_snapshot_newblob_create_cpl, ctx);
++		       bs_snapshot_newblob_create_cpl, NULL, ctx);
+ }
+ 
+ void
+@@ -7006,7 +7073,7 @@ bs_clone_origblob_open_cpl(void *cb_arg, struct spdk_blob *_blob, int bserrno)
+ 	internal_xattrs.get_value = bs_xattr_clone;
+ 
+ 	bs_create_blob(_blob->bs, &opts, &internal_xattrs,
+-		       bs_clone_newblob_create_cpl, ctx);
++		       bs_clone_newblob_create_cpl, NULL, ctx);
+ }
+ 
+ void
+diff --git a/lib/blob/spdk_blob.map b/lib/blob/spdk_blob.map
+index d4d85c2..84ec7f8 100644
+--- a/lib/blob/spdk_blob.map
++++ b/lib/blob/spdk_blob.map
+@@ -27,6 +27,7 @@
+ 	spdk_blob_opts_init;
+ 	spdk_bs_create_blob_ext;
+ 	spdk_bs_create_blob;
++	spdk_bs_create_and_open_blob;
+ 	spdk_bs_create_snapshot;
+ 	spdk_bs_create_clone;
+ 	spdk_blob_get_clones;
+diff --git a/test/unit/lib/blob/blob.c/blob_ut.c b/test/unit/lib/blob/blob.c/blob_ut.c
+index c168e08..bcbc983 100644
+--- a/test/unit/lib/blob/blob.c/blob_ut.c
++++ b/test/unit/lib/blob/blob.c/blob_ut.c
+@@ -503,7 +503,7 @@ blob_create_zero_extent(void)
+ 	CU_ASSERT(g_bserrno == 0);
+ 
+ 	/* Create blob with NULL internal options  */
+-	bs_create_blob(bs, NULL, NULL, blob_op_with_id_complete, NULL);
++	bs_create_blob(bs, NULL, NULL, blob_op_with_id_complete, NULL, NULL);
+ 	poll_threads();
+ 	CU_ASSERT(g_bserrno == 0);
+ 	CU_ASSERT(g_blobid != SPDK_BLOBID_INVALID);
+@@ -615,7 +615,7 @@ blob_create_internal(void)
+ 	internal_xattrs.get_value = _get_xattr_value;
+ 	internal_xattrs.ctx = &g_ctx;
+ 
+-	bs_create_blob(bs, &opts, &internal_xattrs, blob_op_with_id_complete, NULL);
++	bs_create_blob(bs, &opts, &internal_xattrs, blob_op_with_id_complete, NULL, NULL);
+ 	poll_threads();
+ 	CU_ASSERT(g_bserrno == 0);
+ 	CU_ASSERT(g_blobid != SPDK_BLOBID_INVALID);
+@@ -660,7 +660,7 @@ blob_create_internal(void)
+ 
+ 	/* Create blob with NULL internal options  */
+ 
+-	bs_create_blob(bs, NULL, NULL, blob_op_with_id_complete, NULL);
++	bs_create_blob(bs, NULL, NULL, blob_op_with_id_complete, NULL, NULL);
+ 	poll_threads();
+ 	CU_ASSERT(g_bserrno == 0);
+ 	CU_ASSERT(g_blobid != SPDK_BLOBID_INVALID);

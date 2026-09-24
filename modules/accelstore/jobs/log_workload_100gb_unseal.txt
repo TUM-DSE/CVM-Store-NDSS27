@@ -1,0 +1,10 @@
+# LOG Unseal Workload
+# Log name: benchmark_log_100gb
+# Entries: 1,024
+# Assumes log already exists from append workload
+
+# Phase 1: Open log
+OPEN benchmark_log_100gb
+
+# Phase 2: Close log
+CLOSE benchmark_log_100gb

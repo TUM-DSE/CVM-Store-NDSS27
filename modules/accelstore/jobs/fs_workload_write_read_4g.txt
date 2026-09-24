@@ -1,0 +1,402 @@
+# FS Write-then-Read Workload
+# File size: 4294967296 bytes (4g)
+# Files: 64
+# Total data per direction: 274877906944 bytes (256g)
+
+# Phase 1: Create all files
+CREATE wr_file_4g_000000.txt
+CREATE wr_file_4g_000001.txt
+CREATE wr_file_4g_000002.txt
+CREATE wr_file_4g_000003.txt
+CREATE wr_file_4g_000004.txt
+CREATE wr_file_4g_000005.txt
+CREATE wr_file_4g_000006.txt
+CREATE wr_file_4g_000007.txt
+CREATE wr_file_4g_000008.txt
+CREATE wr_file_4g_000009.txt
+CREATE wr_file_4g_000010.txt
+CREATE wr_file_4g_000011.txt
+CREATE wr_file_4g_000012.txt
+CREATE wr_file_4g_000013.txt
+CREATE wr_file_4g_000014.txt
+CREATE wr_file_4g_000015.txt
+CREATE wr_file_4g_000016.txt
+CREATE wr_file_4g_000017.txt
+CREATE wr_file_4g_000018.txt
+CREATE wr_file_4g_000019.txt
+CREATE wr_file_4g_000020.txt
+CREATE wr_file_4g_000021.txt
+CREATE wr_file_4g_000022.txt
+CREATE wr_file_4g_000023.txt
+CREATE wr_file_4g_000024.txt
+CREATE wr_file_4g_000025.txt
+CREATE wr_file_4g_000026.txt
+CREATE wr_file_4g_000027.txt
+CREATE wr_file_4g_000028.txt
+CREATE wr_file_4g_000029.txt
+CREATE wr_file_4g_000030.txt
+CREATE wr_file_4g_000031.txt
+CREATE wr_file_4g_000032.txt
+CREATE wr_file_4g_000033.txt
+CREATE wr_file_4g_000034.txt
+CREATE wr_file_4g_000035.txt
+CREATE wr_file_4g_000036.txt
+CREATE wr_file_4g_000037.txt
+CREATE wr_file_4g_000038.txt
+CREATE wr_file_4g_000039.txt
+CREATE wr_file_4g_000040.txt
+CREATE wr_file_4g_000041.txt
+CREATE wr_file_4g_000042.txt
+CREATE wr_file_4g_000043.txt
+CREATE wr_file_4g_000044.txt
+CREATE wr_file_4g_000045.txt
+CREATE wr_file_4g_000046.txt
+CREATE wr_file_4g_000047.txt
+CREATE wr_file_4g_000048.txt
+CREATE wr_file_4g_000049.txt
+CREATE wr_file_4g_000050.txt
+CREATE wr_file_4g_000051.txt
+CREATE wr_file_4g_000052.txt
+CREATE wr_file_4g_000053.txt
+CREATE wr_file_4g_000054.txt
+CREATE wr_file_4g_000055.txt
+CREATE wr_file_4g_000056.txt
+CREATE wr_file_4g_000057.txt
+CREATE wr_file_4g_000058.txt
+CREATE wr_file_4g_000059.txt
+CREATE wr_file_4g_000060.txt
+CREATE wr_file_4g_000061.txt
+CREATE wr_file_4g_000062.txt
+CREATE wr_file_4g_000063.txt
+
+# Start timing
+START
+
+# Phase 2: Write all files
+WRITE_PATTERN wr_file_4g_000000.txt 4294967296
+WRITE_PATTERN wr_file_4g_000001.txt 4294967296
+WRITE_PATTERN wr_file_4g_000002.txt 4294967296
+WRITE_PATTERN wr_file_4g_000003.txt 4294967296
+WRITE_PATTERN wr_file_4g_000004.txt 4294967296
+WRITE_PATTERN wr_file_4g_000005.txt 4294967296
+WRITE_PATTERN wr_file_4g_000006.txt 4294967296
+WRITE_PATTERN wr_file_4g_000007.txt 4294967296
+WRITE_PATTERN wr_file_4g_000008.txt 4294967296
+WRITE_PATTERN wr_file_4g_000009.txt 4294967296
+WRITE_PATTERN wr_file_4g_000010.txt 4294967296
+WRITE_PATTERN wr_file_4g_000011.txt 4294967296
+WRITE_PATTERN wr_file_4g_000012.txt 4294967296
+WRITE_PATTERN wr_file_4g_000013.txt 4294967296
+WRITE_PATTERN wr_file_4g_000014.txt 4294967296
+WRITE_PATTERN wr_file_4g_000015.txt 4294967296
+WRITE_PATTERN wr_file_4g_000016.txt 4294967296
+WRITE_PATTERN wr_file_4g_000017.txt 4294967296
+WRITE_PATTERN wr_file_4g_000018.txt 4294967296
+WRITE_PATTERN wr_file_4g_000019.txt 4294967296
+WRITE_PATTERN wr_file_4g_000020.txt 4294967296
+WRITE_PATTERN wr_file_4g_000021.txt 4294967296
+WRITE_PATTERN wr_file_4g_000022.txt 4294967296
+WRITE_PATTERN wr_file_4g_000023.txt 4294967296
+WRITE_PATTERN wr_file_4g_000024.txt 4294967296
+WRITE_PATTERN wr_file_4g_000025.txt 4294967296
+WRITE_PATTERN wr_file_4g_000026.txt 4294967296
+WRITE_PATTERN wr_file_4g_000027.txt 4294967296
+WRITE_PATTERN wr_file_4g_000028.txt 4294967296
+WRITE_PATTERN wr_file_4g_000029.txt 4294967296
+WRITE_PATTERN wr_file_4g_000030.txt 4294967296
+WRITE_PATTERN wr_file_4g_000031.txt 4294967296
+WRITE_PATTERN wr_file_4g_000032.txt 4294967296
+WRITE_PATTERN wr_file_4g_000033.txt 4294967296
+WRITE_PATTERN wr_file_4g_000034.txt 4294967296
+WRITE_PATTERN wr_file_4g_000035.txt 4294967296
+WRITE_PATTERN wr_file_4g_000036.txt 4294967296
+WRITE_PATTERN wr_file_4g_000037.txt 4294967296
+WRITE_PATTERN wr_file_4g_000038.txt 4294967296
+WRITE_PATTERN wr_file_4g_000039.txt 4294967296
+WRITE_PATTERN wr_file_4g_000040.txt 4294967296
+WRITE_PATTERN wr_file_4g_000041.txt 4294967296
+WRITE_PATTERN wr_file_4g_000042.txt 4294967296
+WRITE_PATTERN wr_file_4g_000043.txt 4294967296
+WRITE_PATTERN wr_file_4g_000044.txt 4294967296
+WRITE_PATTERN wr_file_4g_000045.txt 4294967296
+WRITE_PATTERN wr_file_4g_000046.txt 4294967296
+WRITE_PATTERN wr_file_4g_000047.txt 4294967296
+WRITE_PATTERN wr_file_4g_000048.txt 4294967296
+WRITE_PATTERN wr_file_4g_000049.txt 4294967296
+WRITE_PATTERN wr_file_4g_000050.txt 4294967296
+WRITE_PATTERN wr_file_4g_000051.txt 4294967296
+WRITE_PATTERN wr_file_4g_000052.txt 4294967296
+WRITE_PATTERN wr_file_4g_000053.txt 4294967296
+WRITE_PATTERN wr_file_4g_000054.txt 4294967296
+WRITE_PATTERN wr_file_4g_000055.txt 4294967296
+WRITE_PATTERN wr_file_4g_000056.txt 4294967296
+WRITE_PATTERN wr_file_4g_000057.txt 4294967296
+WRITE_PATTERN wr_file_4g_000058.txt 4294967296
+WRITE_PATTERN wr_file_4g_000059.txt 4294967296
+WRITE_PATTERN wr_file_4g_000060.txt 4294967296
+WRITE_PATTERN wr_file_4g_000061.txt 4294967296
+WRITE_PATTERN wr_file_4g_000062.txt 4294967296
+WRITE_PATTERN wr_file_4g_000063.txt 4294967296
+CLOSE wr_file_4g_000000.txt
+CLOSE wr_file_4g_000001.txt
+CLOSE wr_file_4g_000002.txt
+CLOSE wr_file_4g_000003.txt
+CLOSE wr_file_4g_000004.txt
+CLOSE wr_file_4g_000005.txt
+CLOSE wr_file_4g_000006.txt
+CLOSE wr_file_4g_000007.txt
+CLOSE wr_file_4g_000008.txt
+CLOSE wr_file_4g_000009.txt
+CLOSE wr_file_4g_000010.txt
+CLOSE wr_file_4g_000011.txt
+CLOSE wr_file_4g_000012.txt
+CLOSE wr_file_4g_000013.txt
+CLOSE wr_file_4g_000014.txt
+CLOSE wr_file_4g_000015.txt
+CLOSE wr_file_4g_000016.txt
+CLOSE wr_file_4g_000017.txt
+CLOSE wr_file_4g_000018.txt
+CLOSE wr_file_4g_000019.txt
+CLOSE wr_file_4g_000020.txt
+CLOSE wr_file_4g_000021.txt
+CLOSE wr_file_4g_000022.txt
+CLOSE wr_file_4g_000023.txt
+CLOSE wr_file_4g_000024.txt
+CLOSE wr_file_4g_000025.txt
+CLOSE wr_file_4g_000026.txt
+CLOSE wr_file_4g_000027.txt
+CLOSE wr_file_4g_000028.txt
+CLOSE wr_file_4g_000029.txt
+CLOSE wr_file_4g_000030.txt
+CLOSE wr_file_4g_000031.txt
+CLOSE wr_file_4g_000032.txt
+CLOSE wr_file_4g_000033.txt
+CLOSE wr_file_4g_000034.txt
+CLOSE wr_file_4g_000035.txt
+CLOSE wr_file_4g_000036.txt
+CLOSE wr_file_4g_000037.txt
+CLOSE wr_file_4g_000038.txt
+CLOSE wr_file_4g_000039.txt
+CLOSE wr_file_4g_000040.txt
+CLOSE wr_file_4g_000041.txt
+CLOSE wr_file_4g_000042.txt
+CLOSE wr_file_4g_000043.txt
+CLOSE wr_file_4g_000044.txt
+CLOSE wr_file_4g_000045.txt
+CLOSE wr_file_4g_000046.txt
+CLOSE wr_file_4g_000047.txt
+CLOSE wr_file_4g_000048.txt
+CLOSE wr_file_4g_000049.txt
+CLOSE wr_file_4g_000050.txt
+CLOSE wr_file_4g_000051.txt
+CLOSE wr_file_4g_000052.txt
+CLOSE wr_file_4g_000053.txt
+CLOSE wr_file_4g_000054.txt
+CLOSE wr_file_4g_000055.txt
+CLOSE wr_file_4g_000056.txt
+CLOSE wr_file_4g_000057.txt
+CLOSE wr_file_4g_000058.txt
+CLOSE wr_file_4g_000059.txt
+CLOSE wr_file_4g_000060.txt
+CLOSE wr_file_4g_000061.txt
+CLOSE wr_file_4g_000062.txt
+CLOSE wr_file_4g_000063.txt
+
+# Phase 3: Read all files
+OPEN wr_file_4g_000000.txt
+OPEN wr_file_4g_000001.txt
+OPEN wr_file_4g_000002.txt
+OPEN wr_file_4g_000003.txt
+OPEN wr_file_4g_000004.txt
+OPEN wr_file_4g_000005.txt
+OPEN wr_file_4g_000006.txt
+OPEN wr_file_4g_000007.txt
+OPEN wr_file_4g_000008.txt
+OPEN wr_file_4g_000009.txt
+OPEN wr_file_4g_000010.txt
+OPEN wr_file_4g_000011.txt
+OPEN wr_file_4g_000012.txt
+OPEN wr_file_4g_000013.txt
+OPEN wr_file_4g_000014.txt
+OPEN wr_file_4g_000015.txt
+OPEN wr_file_4g_000016.txt
+OPEN wr_file_4g_000017.txt
+OPEN wr_file_4g_000018.txt
+OPEN wr_file_4g_000019.txt
+OPEN wr_file_4g_000020.txt
+OPEN wr_file_4g_000021.txt
+OPEN wr_file_4g_000022.txt
+OPEN wr_file_4g_000023.txt
+OPEN wr_file_4g_000024.txt
+OPEN wr_file_4g_000025.txt
+OPEN wr_file_4g_000026.txt
+OPEN wr_file_4g_000027.txt
+OPEN wr_file_4g_000028.txt
+OPEN wr_file_4g_000029.txt
+OPEN wr_file_4g_000030.txt
+OPEN wr_file_4g_000031.txt
+OPEN wr_file_4g_000032.txt
+OPEN wr_file_4g_000033.txt
+OPEN wr_file_4g_000034.txt
+OPEN wr_file_4g_000035.txt
+OPEN wr_file_4g_000036.txt
+OPEN wr_file_4g_000037.txt
+OPEN wr_file_4g_000038.txt
+OPEN wr_file_4g_000039.txt
+OPEN wr_file_4g_000040.txt
+OPEN wr_file_4g_000041.txt
+OPEN wr_file_4g_000042.txt
+OPEN wr_file_4g_000043.txt
+OPEN wr_file_4g_000044.txt
+OPEN wr_file_4g_000045.txt
+OPEN wr_file_4g_000046.txt
+OPEN wr_file_4g_000047.txt
+OPEN wr_file_4g_000048.txt
+OPEN wr_file_4g_000049.txt
+OPEN wr_file_4g_000050.txt
+OPEN wr_file_4g_000051.txt
+OPEN wr_file_4g_000052.txt
+OPEN wr_file_4g_000053.txt
+OPEN wr_file_4g_000054.txt
+OPEN wr_file_4g_000055.txt
+OPEN wr_file_4g_000056.txt
+OPEN wr_file_4g_000057.txt
+OPEN wr_file_4g_000058.txt
+OPEN wr_file_4g_000059.txt
+OPEN wr_file_4g_000060.txt
+OPEN wr_file_4g_000061.txt
+OPEN wr_file_4g_000062.txt
+OPEN wr_file_4g_000063.txt
+READ wr_file_4g_000000.txt
+READ wr_file_4g_000001.txt
+READ wr_file_4g_000002.txt
+READ wr_file_4g_000003.txt
+READ wr_file_4g_000004.txt
+READ wr_file_4g_000005.txt
+READ wr_file_4g_000006.txt
+READ wr_file_4g_000007.txt
+READ wr_file_4g_000008.txt
+READ wr_file_4g_000009.txt
+READ wr_file_4g_000010.txt
+READ wr_file_4g_000011.txt
+READ wr_file_4g_000012.txt
+READ wr_file_4g_000013.txt
+READ wr_file_4g_000014.txt
+READ wr_file_4g_000015.txt
+READ wr_file_4g_000016.txt
+READ wr_file_4g_000017.txt
+READ wr_file_4g_000018.txt
+READ wr_file_4g_000019.txt
+READ wr_file_4g_000020.txt
+READ wr_file_4g_000021.txt
+READ wr_file_4g_000022.txt
+READ wr_file_4g_000023.txt
+READ wr_file_4g_000024.txt
+READ wr_file_4g_000025.txt
+READ wr_file_4g_000026.txt
+READ wr_file_4g_000027.txt
+READ wr_file_4g_000028.txt
+READ wr_file_4g_000029.txt
+READ wr_file_4g_000030.txt
+READ wr_file_4g_000031.txt
+READ wr_file_4g_000032.txt
+READ wr_file_4g_000033.txt
+READ wr_file_4g_000034.txt
+READ wr_file_4g_000035.txt
+READ wr_file_4g_000036.txt
+READ wr_file_4g_000037.txt
+READ wr_file_4g_000038.txt
+READ wr_file_4g_000039.txt
+READ wr_file_4g_000040.txt
+READ wr_file_4g_000041.txt
+READ wr_file_4g_000042.txt
+READ wr_file_4g_000043.txt
+READ wr_file_4g_000044.txt
+READ wr_file_4g_000045.txt
+READ wr_file_4g_000046.txt
+READ wr_file_4g_000047.txt
+READ wr_file_4g_000048.txt
+READ wr_file_4g_000049.txt
+READ wr_file_4g_000050.txt
+READ wr_file_4g_000051.txt
+READ wr_file_4g_000052.txt
+READ wr_file_4g_000053.txt
+READ wr_file_4g_000054.txt
+READ wr_file_4g_000055.txt
+READ wr_file_4g_000056.txt
+READ wr_file_4g_000057.txt
+READ wr_file_4g_000058.txt
+READ wr_file_4g_000059.txt
+READ wr_file_4g_000060.txt
+READ wr_file_4g_000061.txt
+READ wr_file_4g_000062.txt
+READ wr_file_4g_000063.txt
+
+# End timing
+END
+
+# Close all files
+CLOSE wr_file_4g_000000.txt
+CLOSE wr_file_4g_000001.txt
+CLOSE wr_file_4g_000002.txt
+CLOSE wr_file_4g_000003.txt
+CLOSE wr_file_4g_000004.txt
+CLOSE wr_file_4g_000005.txt
+CLOSE wr_file_4g_000006.txt
+CLOSE wr_file_4g_000007.txt
+CLOSE wr_file_4g_000008.txt
+CLOSE wr_file_4g_000009.txt
+CLOSE wr_file_4g_000010.txt
+CLOSE wr_file_4g_000011.txt
+CLOSE wr_file_4g_000012.txt
+CLOSE wr_file_4g_000013.txt
+CLOSE wr_file_4g_000014.txt
+CLOSE wr_file_4g_000015.txt
+CLOSE wr_file_4g_000016.txt
+CLOSE wr_file_4g_000017.txt
+CLOSE wr_file_4g_000018.txt
+CLOSE wr_file_4g_000019.txt
+CLOSE wr_file_4g_000020.txt
+CLOSE wr_file_4g_000021.txt
+CLOSE wr_file_4g_000022.txt
+CLOSE wr_file_4g_000023.txt
+CLOSE wr_file_4g_000024.txt
+CLOSE wr_file_4g_000025.txt
+CLOSE wr_file_4g_000026.txt
+CLOSE wr_file_4g_000027.txt
+CLOSE wr_file_4g_000028.txt
+CLOSE wr_file_4g_000029.txt
+CLOSE wr_file_4g_000030.txt
+CLOSE wr_file_4g_000031.txt
+CLOSE wr_file_4g_000032.txt
+CLOSE wr_file_4g_000033.txt
+CLOSE wr_file_4g_000034.txt
+CLOSE wr_file_4g_000035.txt
+CLOSE wr_file_4g_000036.txt
+CLOSE wr_file_4g_000037.txt
+CLOSE wr_file_4g_000038.txt
+CLOSE wr_file_4g_000039.txt
+CLOSE wr_file_4g_000040.txt
+CLOSE wr_file_4g_000041.txt
+CLOSE wr_file_4g_000042.txt
+CLOSE wr_file_4g_000043.txt
+CLOSE wr_file_4g_000044.txt
+CLOSE wr_file_4g_000045.txt
+CLOSE wr_file_4g_000046.txt
+CLOSE wr_file_4g_000047.txt
+CLOSE wr_file_4g_000048.txt
+CLOSE wr_file_4g_000049.txt
+CLOSE wr_file_4g_000050.txt
+CLOSE wr_file_4g_000051.txt
+CLOSE wr_file_4g_000052.txt
+CLOSE wr_file_4g_000053.txt
+CLOSE wr_file_4g_000054.txt
+CLOSE wr_file_4g_000055.txt
+CLOSE wr_file_4g_000056.txt
+CLOSE wr_file_4g_000057.txt
+CLOSE wr_file_4g_000058.txt
+CLOSE wr_file_4g_000059.txt
+CLOSE wr_file_4g_000060.txt
+CLOSE wr_file_4g_000061.txt
+CLOSE wr_file_4g_000062.txt
+CLOSE wr_file_4g_000063.txt

@@ -1,0 +1,150 @@
+# Append-then-Retrieve LOG Workload
+# Log name: benchmark_log_4GB
+# Entries: 64
+# Append size: 4294967296 bytes each
+# Retrieve pattern: sequential
+
+# Phase 1: Create and open log
+CREATE benchmark_log_4GB
+OPEN benchmark_log_4GB
+
+# Start timing
+START
+
+# Phase 2: Append all entries
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+APPEND_PATTERN benchmark_log_4GB 4294967296
+
+# Phase 3: Retrieve entries
+RETRIEVE benchmark_log_4GB 0
+RETRIEVE benchmark_log_4GB 1
+RETRIEVE benchmark_log_4GB 2
+RETRIEVE benchmark_log_4GB 3
+RETRIEVE benchmark_log_4GB 4
+RETRIEVE benchmark_log_4GB 5
+RETRIEVE benchmark_log_4GB 6
+RETRIEVE benchmark_log_4GB 7
+RETRIEVE benchmark_log_4GB 8
+RETRIEVE benchmark_log_4GB 9
+RETRIEVE benchmark_log_4GB 10
+RETRIEVE benchmark_log_4GB 11
+RETRIEVE benchmark_log_4GB 12
+RETRIEVE benchmark_log_4GB 13
+RETRIEVE benchmark_log_4GB 14
+RETRIEVE benchmark_log_4GB 15
+RETRIEVE benchmark_log_4GB 16
+RETRIEVE benchmark_log_4GB 17
+RETRIEVE benchmark_log_4GB 18
+RETRIEVE benchmark_log_4GB 19
+RETRIEVE benchmark_log_4GB 20
+RETRIEVE benchmark_log_4GB 21
+RETRIEVE benchmark_log_4GB 22
+RETRIEVE benchmark_log_4GB 23
+RETRIEVE benchmark_log_4GB 24
+RETRIEVE benchmark_log_4GB 25
+RETRIEVE benchmark_log_4GB 26
+RETRIEVE benchmark_log_4GB 27
+RETRIEVE benchmark_log_4GB 28
+RETRIEVE benchmark_log_4GB 29
+RETRIEVE benchmark_log_4GB 30
+RETRIEVE benchmark_log_4GB 31
+RETRIEVE benchmark_log_4GB 32
+RETRIEVE benchmark_log_4GB 33
+RETRIEVE benchmark_log_4GB 34
+RETRIEVE benchmark_log_4GB 35
+RETRIEVE benchmark_log_4GB 36
+RETRIEVE benchmark_log_4GB 37
+RETRIEVE benchmark_log_4GB 38
+RETRIEVE benchmark_log_4GB 39
+RETRIEVE benchmark_log_4GB 40
+RETRIEVE benchmark_log_4GB 41
+RETRIEVE benchmark_log_4GB 42
+RETRIEVE benchmark_log_4GB 43
+RETRIEVE benchmark_log_4GB 44
+RETRIEVE benchmark_log_4GB 45
+RETRIEVE benchmark_log_4GB 46
+RETRIEVE benchmark_log_4GB 47
+RETRIEVE benchmark_log_4GB 48
+RETRIEVE benchmark_log_4GB 49
+RETRIEVE benchmark_log_4GB 50
+RETRIEVE benchmark_log_4GB 51
+RETRIEVE benchmark_log_4GB 52
+RETRIEVE benchmark_log_4GB 53
+RETRIEVE benchmark_log_4GB 54
+RETRIEVE benchmark_log_4GB 55
+RETRIEVE benchmark_log_4GB 56
+RETRIEVE benchmark_log_4GB 57
+RETRIEVE benchmark_log_4GB 58
+RETRIEVE benchmark_log_4GB 59
+RETRIEVE benchmark_log_4GB 60
+RETRIEVE benchmark_log_4GB 61
+RETRIEVE benchmark_log_4GB 62
+RETRIEVE benchmark_log_4GB 63
+
+# End timing
+END
+
+# Phase 4: Close log
+CLOSE benchmark_log_4GB

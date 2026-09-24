@@ -1,0 +1,8 @@
+build/
+bench-result/
+result
+result-*
+.direnv/
+__pycache__/
+*.pyc
+.pre-commit-config.yaml

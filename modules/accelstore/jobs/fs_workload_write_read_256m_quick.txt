@@ -1,0 +1,1554 @@
+# FS Write-then-Read Workload
+# File size: 268435456 bytes (256m)
+# Files: 256
+# Total data per direction: 68719476736 bytes (64g)
+
+# Phase 1: Create all files
+CREATE wr_file_256m_000000.txt
+CREATE wr_file_256m_000001.txt
+CREATE wr_file_256m_000002.txt
+CREATE wr_file_256m_000003.txt
+CREATE wr_file_256m_000004.txt
+CREATE wr_file_256m_000005.txt
+CREATE wr_file_256m_000006.txt
+CREATE wr_file_256m_000007.txt
+CREATE wr_file_256m_000008.txt
+CREATE wr_file_256m_000009.txt
+CREATE wr_file_256m_000010.txt
+CREATE wr_file_256m_000011.txt
+CREATE wr_file_256m_000012.txt
+CREATE wr_file_256m_000013.txt
+CREATE wr_file_256m_000014.txt
+CREATE wr_file_256m_000015.txt
+CREATE wr_file_256m_000016.txt
+CREATE wr_file_256m_000017.txt
+CREATE wr_file_256m_000018.txt
+CREATE wr_file_256m_000019.txt
+CREATE wr_file_256m_000020.txt
+CREATE wr_file_256m_000021.txt
+CREATE wr_file_256m_000022.txt
+CREATE wr_file_256m_000023.txt
+CREATE wr_file_256m_000024.txt
+CREATE wr_file_256m_000025.txt
+CREATE wr_file_256m_000026.txt
+CREATE wr_file_256m_000027.txt
+CREATE wr_file_256m_000028.txt
+CREATE wr_file_256m_000029.txt
+CREATE wr_file_256m_000030.txt
+CREATE wr_file_256m_000031.txt
+CREATE wr_file_256m_000032.txt
+CREATE wr_file_256m_000033.txt
+CREATE wr_file_256m_000034.txt
+CREATE wr_file_256m_000035.txt
+CREATE wr_file_256m_000036.txt
+CREATE wr_file_256m_000037.txt
+CREATE wr_file_256m_000038.txt
+CREATE wr_file_256m_000039.txt
+CREATE wr_file_256m_000040.txt
+CREATE wr_file_256m_000041.txt
+CREATE wr_file_256m_000042.txt
+CREATE wr_file_256m_000043.txt
+CREATE wr_file_256m_000044.txt
+CREATE wr_file_256m_000045.txt
+CREATE wr_file_256m_000046.txt
+CREATE wr_file_256m_000047.txt
+CREATE wr_file_256m_000048.txt
+CREATE wr_file_256m_000049.txt
+CREATE wr_file_256m_000050.txt
+CREATE wr_file_256m_000051.txt
+CREATE wr_file_256m_000052.txt
+CREATE wr_file_256m_000053.txt
+CREATE wr_file_256m_000054.txt
+CREATE wr_file_256m_000055.txt
+CREATE wr_file_256m_000056.txt
+CREATE wr_file_256m_000057.txt
+CREATE wr_file_256m_000058.txt
+CREATE wr_file_256m_000059.txt
+CREATE wr_file_256m_000060.txt
+CREATE wr_file_256m_000061.txt
+CREATE wr_file_256m_000062.txt
+CREATE wr_file_256m_000063.txt
+CREATE wr_file_256m_000064.txt
+CREATE wr_file_256m_000065.txt
+CREATE wr_file_256m_000066.txt
+CREATE wr_file_256m_000067.txt
+CREATE wr_file_256m_000068.txt
+CREATE wr_file_256m_000069.txt
+CREATE wr_file_256m_000070.txt
+CREATE wr_file_256m_000071.txt
+CREATE wr_file_256m_000072.txt
+CREATE wr_file_256m_000073.txt
+CREATE wr_file_256m_000074.txt
+CREATE wr_file_256m_000075.txt
+CREATE wr_file_256m_000076.txt
+CREATE wr_file_256m_000077.txt
+CREATE wr_file_256m_000078.txt
+CREATE wr_file_256m_000079.txt
+CREATE wr_file_256m_000080.txt
+CREATE wr_file_256m_000081.txt
+CREATE wr_file_256m_000082.txt
+CREATE wr_file_256m_000083.txt
+CREATE wr_file_256m_000084.txt
+CREATE wr_file_256m_000085.txt
+CREATE wr_file_256m_000086.txt
+CREATE wr_file_256m_000087.txt
+CREATE wr_file_256m_000088.txt
+CREATE wr_file_256m_000089.txt
+CREATE wr_file_256m_000090.txt
+CREATE wr_file_256m_000091.txt
+CREATE wr_file_256m_000092.txt
+CREATE wr_file_256m_000093.txt
+CREATE wr_file_256m_000094.txt
+CREATE wr_file_256m_000095.txt
+CREATE wr_file_256m_000096.txt
+CREATE wr_file_256m_000097.txt
+CREATE wr_file_256m_000098.txt
+CREATE wr_file_256m_000099.txt
+CREATE wr_file_256m_000100.txt
+CREATE wr_file_256m_000101.txt
+CREATE wr_file_256m_000102.txt
+CREATE wr_file_256m_000103.txt
+CREATE wr_file_256m_000104.txt
+CREATE wr_file_256m_000105.txt
+CREATE wr_file_256m_000106.txt
+CREATE wr_file_256m_000107.txt
+CREATE wr_file_256m_000108.txt
+CREATE wr_file_256m_000109.txt
+CREATE wr_file_256m_000110.txt
+CREATE wr_file_256m_000111.txt
+CREATE wr_file_256m_000112.txt
+CREATE wr_file_256m_000113.txt
+CREATE wr_file_256m_000114.txt
+CREATE wr_file_256m_000115.txt
+CREATE wr_file_256m_000116.txt
+CREATE wr_file_256m_000117.txt
+CREATE wr_file_256m_000118.txt
+CREATE wr_file_256m_000119.txt
+CREATE wr_file_256m_000120.txt
+CREATE wr_file_256m_000121.txt
+CREATE wr_file_256m_000122.txt
+CREATE wr_file_256m_000123.txt
+CREATE wr_file_256m_000124.txt
+CREATE wr_file_256m_000125.txt
+CREATE wr_file_256m_000126.txt
+CREATE wr_file_256m_000127.txt
+CREATE wr_file_256m_000128.txt
+CREATE wr_file_256m_000129.txt
+CREATE wr_file_256m_000130.txt
+CREATE wr_file_256m_000131.txt
+CREATE wr_file_256m_000132.txt
+CREATE wr_file_256m_000133.txt
+CREATE wr_file_256m_000134.txt
+CREATE wr_file_256m_000135.txt
+CREATE wr_file_256m_000136.txt
+CREATE wr_file_256m_000137.txt
+CREATE wr_file_256m_000138.txt
+CREATE wr_file_256m_000139.txt
+CREATE wr_file_256m_000140.txt
+CREATE wr_file_256m_000141.txt
+CREATE wr_file_256m_000142.txt
+CREATE wr_file_256m_000143.txt
+CREATE wr_file_256m_000144.txt
+CREATE wr_file_256m_000145.txt
+CREATE wr_file_256m_000146.txt
+CREATE wr_file_256m_000147.txt
+CREATE wr_file_256m_000148.txt
+CREATE wr_file_256m_000149.txt
+CREATE wr_file_256m_000150.txt
+CREATE wr_file_256m_000151.txt
+CREATE wr_file_256m_000152.txt
+CREATE wr_file_256m_000153.txt
+CREATE wr_file_256m_000154.txt
+CREATE wr_file_256m_000155.txt
+CREATE wr_file_256m_000156.txt
+CREATE wr_file_256m_000157.txt
+CREATE wr_file_256m_000158.txt
+CREATE wr_file_256m_000159.txt
+CREATE wr_file_256m_000160.txt
+CREATE wr_file_256m_000161.txt
+CREATE wr_file_256m_000162.txt
+CREATE wr_file_256m_000163.txt
+CREATE wr_file_256m_000164.txt
+CREATE wr_file_256m_000165.txt
+CREATE wr_file_256m_000166.txt
+CREATE wr_file_256m_000167.txt
+CREATE wr_file_256m_000168.txt
+CREATE wr_file_256m_000169.txt
+CREATE wr_file_256m_000170.txt
+CREATE wr_file_256m_000171.txt
+CREATE wr_file_256m_000172.txt
+CREATE wr_file_256m_000173.txt
+CREATE wr_file_256m_000174.txt
+CREATE wr_file_256m_000175.txt
+CREATE wr_file_256m_000176.txt
+CREATE wr_file_256m_000177.txt
+CREATE wr_file_256m_000178.txt
+CREATE wr_file_256m_000179.txt
+CREATE wr_file_256m_000180.txt
+CREATE wr_file_256m_000181.txt
+CREATE wr_file_256m_000182.txt
+CREATE wr_file_256m_000183.txt
+CREATE wr_file_256m_000184.txt
+CREATE wr_file_256m_000185.txt
+CREATE wr_file_256m_000186.txt
+CREATE wr_file_256m_000187.txt
+CREATE wr_file_256m_000188.txt
+CREATE wr_file_256m_000189.txt
+CREATE wr_file_256m_000190.txt
+CREATE wr_file_256m_000191.txt
+CREATE wr_file_256m_000192.txt
+CREATE wr_file_256m_000193.txt
+CREATE wr_file_256m_000194.txt
+CREATE wr_file_256m_000195.txt
+CREATE wr_file_256m_000196.txt
+CREATE wr_file_256m_000197.txt
+CREATE wr_file_256m_000198.txt
+CREATE wr_file_256m_000199.txt
+CREATE wr_file_256m_000200.txt
+CREATE wr_file_256m_000201.txt
+CREATE wr_file_256m_000202.txt
+CREATE wr_file_256m_000203.txt
+CREATE wr_file_256m_000204.txt
+CREATE wr_file_256m_000205.txt
+CREATE wr_file_256m_000206.txt
+CREATE wr_file_256m_000207.txt
+CREATE wr_file_256m_000208.txt
+CREATE wr_file_256m_000209.txt
+CREATE wr_file_256m_000210.txt
+CREATE wr_file_256m_000211.txt
+CREATE wr_file_256m_000212.txt
+CREATE wr_file_256m_000213.txt
+CREATE wr_file_256m_000214.txt
+CREATE wr_file_256m_000215.txt
+CREATE wr_file_256m_000216.txt
+CREATE wr_file_256m_000217.txt
+CREATE wr_file_256m_000218.txt
+CREATE wr_file_256m_000219.txt
+CREATE wr_file_256m_000220.txt
+CREATE wr_file_256m_000221.txt
+CREATE wr_file_256m_000222.txt
+CREATE wr_file_256m_000223.txt
+CREATE wr_file_256m_000224.txt
+CREATE wr_file_256m_000225.txt
+CREATE wr_file_256m_000226.txt
+CREATE wr_file_256m_000227.txt
+CREATE wr_file_256m_000228.txt
+CREATE wr_file_256m_000229.txt
+CREATE wr_file_256m_000230.txt
+CREATE wr_file_256m_000231.txt
+CREATE wr_file_256m_000232.txt
+CREATE wr_file_256m_000233.txt
+CREATE wr_file_256m_000234.txt
+CREATE wr_file_256m_000235.txt
+CREATE wr_file_256m_000236.txt
+CREATE wr_file_256m_000237.txt
+CREATE wr_file_256m_000238.txt
+CREATE wr_file_256m_000239.txt
+CREATE wr_file_256m_000240.txt
+CREATE wr_file_256m_000241.txt
+CREATE wr_file_256m_000242.txt
+CREATE wr_file_256m_000243.txt
+CREATE wr_file_256m_000244.txt
+CREATE wr_file_256m_000245.txt
+CREATE wr_file_256m_000246.txt
+CREATE wr_file_256m_000247.txt
+CREATE wr_file_256m_000248.txt
+CREATE wr_file_256m_000249.txt
+CREATE wr_file_256m_000250.txt
+CREATE wr_file_256m_000251.txt
+CREATE wr_file_256m_000252.txt
+CREATE wr_file_256m_000253.txt
+CREATE wr_file_256m_000254.txt
+CREATE wr_file_256m_000255.txt
+
+# Start timing
+START
+
+# Phase 2: Write all files
+WRITE_PATTERN wr_file_256m_000000.txt 268435456
+WRITE_PATTERN wr_file_256m_000001.txt 268435456
+WRITE_PATTERN wr_file_256m_000002.txt 268435456
+WRITE_PATTERN wr_file_256m_000003.txt 268435456
+WRITE_PATTERN wr_file_256m_000004.txt 268435456
+WRITE_PATTERN wr_file_256m_000005.txt 268435456
+WRITE_PATTERN wr_file_256m_000006.txt 268435456
+WRITE_PATTERN wr_file_256m_000007.txt 268435456
+WRITE_PATTERN wr_file_256m_000008.txt 268435456
+WRITE_PATTERN wr_file_256m_000009.txt 268435456
+WRITE_PATTERN wr_file_256m_000010.txt 268435456
+WRITE_PATTERN wr_file_256m_000011.txt 268435456
+WRITE_PATTERN wr_file_256m_000012.txt 268435456
+WRITE_PATTERN wr_file_256m_000013.txt 268435456
+WRITE_PATTERN wr_file_256m_000014.txt 268435456
+WRITE_PATTERN wr_file_256m_000015.txt 268435456
+WRITE_PATTERN wr_file_256m_000016.txt 268435456
+WRITE_PATTERN wr_file_256m_000017.txt 268435456
+WRITE_PATTERN wr_file_256m_000018.txt 268435456
+WRITE_PATTERN wr_file_256m_000019.txt 268435456
+WRITE_PATTERN wr_file_256m_000020.txt 268435456
+WRITE_PATTERN wr_file_256m_000021.txt 268435456
+WRITE_PATTERN wr_file_256m_000022.txt 268435456
+WRITE_PATTERN wr_file_256m_000023.txt 268435456
+WRITE_PATTERN wr_file_256m_000024.txt 268435456
+WRITE_PATTERN wr_file_256m_000025.txt 268435456
+WRITE_PATTERN wr_file_256m_000026.txt 268435456
+WRITE_PATTERN wr_file_256m_000027.txt 268435456
+WRITE_PATTERN wr_file_256m_000028.txt 268435456
+WRITE_PATTERN wr_file_256m_000029.txt 268435456
+WRITE_PATTERN wr_file_256m_000030.txt 268435456
+WRITE_PATTERN wr_file_256m_000031.txt 268435456
+WRITE_PATTERN wr_file_256m_000032.txt 268435456
+WRITE_PATTERN wr_file_256m_000033.txt 268435456
+WRITE_PATTERN wr_file_256m_000034.txt 268435456
+WRITE_PATTERN wr_file_256m_000035.txt 268435456
+WRITE_PATTERN wr_file_256m_000036.txt 268435456
+WRITE_PATTERN wr_file_256m_000037.txt 268435456
+WRITE_PATTERN wr_file_256m_000038.txt 268435456
+WRITE_PATTERN wr_file_256m_000039.txt 268435456
+WRITE_PATTERN wr_file_256m_000040.txt 268435456
+WRITE_PATTERN wr_file_256m_000041.txt 268435456
+WRITE_PATTERN wr_file_256m_000042.txt 268435456
+WRITE_PATTERN wr_file_256m_000043.txt 268435456
+WRITE_PATTERN wr_file_256m_000044.txt 268435456
+WRITE_PATTERN wr_file_256m_000045.txt 268435456
+WRITE_PATTERN wr_file_256m_000046.txt 268435456
+WRITE_PATTERN wr_file_256m_000047.txt 268435456
+WRITE_PATTERN wr_file_256m_000048.txt 268435456
+WRITE_PATTERN wr_file_256m_000049.txt 268435456
+WRITE_PATTERN wr_file_256m_000050.txt 268435456
+WRITE_PATTERN wr_file_256m_000051.txt 268435456
+WRITE_PATTERN wr_file_256m_000052.txt 268435456
+WRITE_PATTERN wr_file_256m_000053.txt 268435456
+WRITE_PATTERN wr_file_256m_000054.txt 268435456
+WRITE_PATTERN wr_file_256m_000055.txt 268435456
+WRITE_PATTERN wr_file_256m_000056.txt 268435456
+WRITE_PATTERN wr_file_256m_000057.txt 268435456
+WRITE_PATTERN wr_file_256m_000058.txt 268435456
+WRITE_PATTERN wr_file_256m_000059.txt 268435456
+WRITE_PATTERN wr_file_256m_000060.txt 268435456
+WRITE_PATTERN wr_file_256m_000061.txt 268435456
+WRITE_PATTERN wr_file_256m_000062.txt 268435456
+WRITE_PATTERN wr_file_256m_000063.txt 268435456
+WRITE_PATTERN wr_file_256m_000064.txt 268435456
+WRITE_PATTERN wr_file_256m_000065.txt 268435456
+WRITE_PATTERN wr_file_256m_000066.txt 268435456
+WRITE_PATTERN wr_file_256m_000067.txt 268435456
+WRITE_PATTERN wr_file_256m_000068.txt 268435456
+WRITE_PATTERN wr_file_256m_000069.txt 268435456
+WRITE_PATTERN wr_file_256m_000070.txt 268435456
+WRITE_PATTERN wr_file_256m_000071.txt 268435456
+WRITE_PATTERN wr_file_256m_000072.txt 268435456
+WRITE_PATTERN wr_file_256m_000073.txt 268435456
+WRITE_PATTERN wr_file_256m_000074.txt 268435456
+WRITE_PATTERN wr_file_256m_000075.txt 268435456
+WRITE_PATTERN wr_file_256m_000076.txt 268435456
+WRITE_PATTERN wr_file_256m_000077.txt 268435456
+WRITE_PATTERN wr_file_256m_000078.txt 268435456
+WRITE_PATTERN wr_file_256m_000079.txt 268435456
+WRITE_PATTERN wr_file_256m_000080.txt 268435456
+WRITE_PATTERN wr_file_256m_000081.txt 268435456
+WRITE_PATTERN wr_file_256m_000082.txt 268435456
+WRITE_PATTERN wr_file_256m_000083.txt 268435456
+WRITE_PATTERN wr_file_256m_000084.txt 268435456
+WRITE_PATTERN wr_file_256m_000085.txt 268435456
+WRITE_PATTERN wr_file_256m_000086.txt 268435456
+WRITE_PATTERN wr_file_256m_000087.txt 268435456
+WRITE_PATTERN wr_file_256m_000088.txt 268435456
+WRITE_PATTERN wr_file_256m_000089.txt 268435456
+WRITE_PATTERN wr_file_256m_000090.txt 268435456
+WRITE_PATTERN wr_file_256m_000091.txt 268435456
+WRITE_PATTERN wr_file_256m_000092.txt 268435456
+WRITE_PATTERN wr_file_256m_000093.txt 268435456
+WRITE_PATTERN wr_file_256m_000094.txt 268435456
+WRITE_PATTERN wr_file_256m_000095.txt 268435456
+WRITE_PATTERN wr_file_256m_000096.txt 268435456
+WRITE_PATTERN wr_file_256m_000097.txt 268435456
+WRITE_PATTERN wr_file_256m_000098.txt 268435456
+WRITE_PATTERN wr_file_256m_000099.txt 268435456
+WRITE_PATTERN wr_file_256m_000100.txt 268435456
+WRITE_PATTERN wr_file_256m_000101.txt 268435456
+WRITE_PATTERN wr_file_256m_000102.txt 268435456
+WRITE_PATTERN wr_file_256m_000103.txt 268435456
+WRITE_PATTERN wr_file_256m_000104.txt 268435456
+WRITE_PATTERN wr_file_256m_000105.txt 268435456
+WRITE_PATTERN wr_file_256m_000106.txt 268435456
+WRITE_PATTERN wr_file_256m_000107.txt 268435456
+WRITE_PATTERN wr_file_256m_000108.txt 268435456
+WRITE_PATTERN wr_file_256m_000109.txt 268435456
+WRITE_PATTERN wr_file_256m_000110.txt 268435456
+WRITE_PATTERN wr_file_256m_000111.txt 268435456
+WRITE_PATTERN wr_file_256m_000112.txt 268435456
+WRITE_PATTERN wr_file_256m_000113.txt 268435456
+WRITE_PATTERN wr_file_256m_000114.txt 268435456
+WRITE_PATTERN wr_file_256m_000115.txt 268435456
+WRITE_PATTERN wr_file_256m_000116.txt 268435456
+WRITE_PATTERN wr_file_256m_000117.txt 268435456
+WRITE_PATTERN wr_file_256m_000118.txt 268435456
+WRITE_PATTERN wr_file_256m_000119.txt 268435456
+WRITE_PATTERN wr_file_256m_000120.txt 268435456
+WRITE_PATTERN wr_file_256m_000121.txt 268435456
+WRITE_PATTERN wr_file_256m_000122.txt 268435456
+WRITE_PATTERN wr_file_256m_000123.txt 268435456
+WRITE_PATTERN wr_file_256m_000124.txt 268435456
+WRITE_PATTERN wr_file_256m_000125.txt 268435456
+WRITE_PATTERN wr_file_256m_000126.txt 268435456
+WRITE_PATTERN wr_file_256m_000127.txt 268435456
+WRITE_PATTERN wr_file_256m_000128.txt 268435456
+WRITE_PATTERN wr_file_256m_000129.txt 268435456
+WRITE_PATTERN wr_file_256m_000130.txt 268435456
+WRITE_PATTERN wr_file_256m_000131.txt 268435456
+WRITE_PATTERN wr_file_256m_000132.txt 268435456
+WRITE_PATTERN wr_file_256m_000133.txt 268435456
+WRITE_PATTERN wr_file_256m_000134.txt 268435456
+WRITE_PATTERN wr_file_256m_000135.txt 268435456
+WRITE_PATTERN wr_file_256m_000136.txt 268435456
+WRITE_PATTERN wr_file_256m_000137.txt 268435456
+WRITE_PATTERN wr_file_256m_000138.txt 268435456
+WRITE_PATTERN wr_file_256m_000139.txt 268435456
+WRITE_PATTERN wr_file_256m_000140.txt 268435456
+WRITE_PATTERN wr_file_256m_000141.txt 268435456
+WRITE_PATTERN wr_file_256m_000142.txt 268435456
+WRITE_PATTERN wr_file_256m_000143.txt 268435456
+WRITE_PATTERN wr_file_256m_000144.txt 268435456
+WRITE_PATTERN wr_file_256m_000145.txt 268435456
+WRITE_PATTERN wr_file_256m_000146.txt 268435456
+WRITE_PATTERN wr_file_256m_000147.txt 268435456
+WRITE_PATTERN wr_file_256m_000148.txt 268435456
+WRITE_PATTERN wr_file_256m_000149.txt 268435456
+WRITE_PATTERN wr_file_256m_000150.txt 268435456
+WRITE_PATTERN wr_file_256m_000151.txt 268435456
+WRITE_PATTERN wr_file_256m_000152.txt 268435456
+WRITE_PATTERN wr_file_256m_000153.txt 268435456
+WRITE_PATTERN wr_file_256m_000154.txt 268435456
+WRITE_PATTERN wr_file_256m_000155.txt 268435456
+WRITE_PATTERN wr_file_256m_000156.txt 268435456
+WRITE_PATTERN wr_file_256m_000157.txt 268435456
+WRITE_PATTERN wr_file_256m_000158.txt 268435456
+WRITE_PATTERN wr_file_256m_000159.txt 268435456
+WRITE_PATTERN wr_file_256m_000160.txt 268435456
+WRITE_PATTERN wr_file_256m_000161.txt 268435456
+WRITE_PATTERN wr_file_256m_000162.txt 268435456
+WRITE_PATTERN wr_file_256m_000163.txt 268435456
+WRITE_PATTERN wr_file_256m_000164.txt 268435456
+WRITE_PATTERN wr_file_256m_000165.txt 268435456
+WRITE_PATTERN wr_file_256m_000166.txt 268435456
+WRITE_PATTERN wr_file_256m_000167.txt 268435456
+WRITE_PATTERN wr_file_256m_000168.txt 268435456
+WRITE_PATTERN wr_file_256m_000169.txt 268435456
+WRITE_PATTERN wr_file_256m_000170.txt 268435456
+WRITE_PATTERN wr_file_256m_000171.txt 268435456
+WRITE_PATTERN wr_file_256m_000172.txt 268435456
+WRITE_PATTERN wr_file_256m_000173.txt 268435456
+WRITE_PATTERN wr_file_256m_000174.txt 268435456
+WRITE_PATTERN wr_file_256m_000175.txt 268435456
+WRITE_PATTERN wr_file_256m_000176.txt 268435456
+WRITE_PATTERN wr_file_256m_000177.txt 268435456
+WRITE_PATTERN wr_file_256m_000178.txt 268435456
+WRITE_PATTERN wr_file_256m_000179.txt 268435456
+WRITE_PATTERN wr_file_256m_000180.txt 268435456
+WRITE_PATTERN wr_file_256m_000181.txt 268435456
+WRITE_PATTERN wr_file_256m_000182.txt 268435456
+WRITE_PATTERN wr_file_256m_000183.txt 268435456
+WRITE_PATTERN wr_file_256m_000184.txt 268435456
+WRITE_PATTERN wr_file_256m_000185.txt 268435456
+WRITE_PATTERN wr_file_256m_000186.txt 268435456
+WRITE_PATTERN wr_file_256m_000187.txt 268435456
+WRITE_PATTERN wr_file_256m_000188.txt 268435456
+WRITE_PATTERN wr_file_256m_000189.txt 268435456
+WRITE_PATTERN wr_file_256m_000190.txt 268435456
+WRITE_PATTERN wr_file_256m_000191.txt 268435456
+WRITE_PATTERN wr_file_256m_000192.txt 268435456
+WRITE_PATTERN wr_file_256m_000193.txt 268435456
+WRITE_PATTERN wr_file_256m_000194.txt 268435456
+WRITE_PATTERN wr_file_256m_000195.txt 268435456
+WRITE_PATTERN wr_file_256m_000196.txt 268435456
+WRITE_PATTERN wr_file_256m_000197.txt 268435456
+WRITE_PATTERN wr_file_256m_000198.txt 268435456
+WRITE_PATTERN wr_file_256m_000199.txt 268435456
+WRITE_PATTERN wr_file_256m_000200.txt 268435456
+WRITE_PATTERN wr_file_256m_000201.txt 268435456
+WRITE_PATTERN wr_file_256m_000202.txt 268435456
+WRITE_PATTERN wr_file_256m_000203.txt 268435456
+WRITE_PATTERN wr_file_256m_000204.txt 268435456
+WRITE_PATTERN wr_file_256m_000205.txt 268435456
+WRITE_PATTERN wr_file_256m_000206.txt 268435456
+WRITE_PATTERN wr_file_256m_000207.txt 268435456
+WRITE_PATTERN wr_file_256m_000208.txt 268435456
+WRITE_PATTERN wr_file_256m_000209.txt 268435456
+WRITE_PATTERN wr_file_256m_000210.txt 268435456
+WRITE_PATTERN wr_file_256m_000211.txt 268435456
+WRITE_PATTERN wr_file_256m_000212.txt 268435456
+WRITE_PATTERN wr_file_256m_000213.txt 268435456
+WRITE_PATTERN wr_file_256m_000214.txt 268435456
+WRITE_PATTERN wr_file_256m_000215.txt 268435456
+WRITE_PATTERN wr_file_256m_000216.txt 268435456
+WRITE_PATTERN wr_file_256m_000217.txt 268435456
+WRITE_PATTERN wr_file_256m_000218.txt 268435456
+WRITE_PATTERN wr_file_256m_000219.txt 268435456
+WRITE_PATTERN wr_file_256m_000220.txt 268435456
+WRITE_PATTERN wr_file_256m_000221.txt 268435456
+WRITE_PATTERN wr_file_256m_000222.txt 268435456
+WRITE_PATTERN wr_file_256m_000223.txt 268435456
+WRITE_PATTERN wr_file_256m_000224.txt 268435456
+WRITE_PATTERN wr_file_256m_000225.txt 268435456
+WRITE_PATTERN wr_file_256m_000226.txt 268435456
+WRITE_PATTERN wr_file_256m_000227.txt 268435456
+WRITE_PATTERN wr_file_256m_000228.txt 268435456
+WRITE_PATTERN wr_file_256m_000229.txt 268435456
+WRITE_PATTERN wr_file_256m_000230.txt 268435456
+WRITE_PATTERN wr_file_256m_000231.txt 268435456
+WRITE_PATTERN wr_file_256m_000232.txt 268435456
+WRITE_PATTERN wr_file_256m_000233.txt 268435456
+WRITE_PATTERN wr_file_256m_000234.txt 268435456
+WRITE_PATTERN wr_file_256m_000235.txt 268435456
+WRITE_PATTERN wr_file_256m_000236.txt 268435456
+WRITE_PATTERN wr_file_256m_000237.txt 268435456
+WRITE_PATTERN wr_file_256m_000238.txt 268435456
+WRITE_PATTERN wr_file_256m_000239.txt 268435456
+WRITE_PATTERN wr_file_256m_000240.txt 268435456
+WRITE_PATTERN wr_file_256m_000241.txt 268435456
+WRITE_PATTERN wr_file_256m_000242.txt 268435456
+WRITE_PATTERN wr_file_256m_000243.txt 268435456
+WRITE_PATTERN wr_file_256m_000244.txt 268435456
+WRITE_PATTERN wr_file_256m_000245.txt 268435456
+WRITE_PATTERN wr_file_256m_000246.txt 268435456
+WRITE_PATTERN wr_file_256m_000247.txt 268435456
+WRITE_PATTERN wr_file_256m_000248.txt 268435456
+WRITE_PATTERN wr_file_256m_000249.txt 268435456
+WRITE_PATTERN wr_file_256m_000250.txt 268435456
+WRITE_PATTERN wr_file_256m_000251.txt 268435456
+WRITE_PATTERN wr_file_256m_000252.txt 268435456
+WRITE_PATTERN wr_file_256m_000253.txt 268435456
+WRITE_PATTERN wr_file_256m_000254.txt 268435456
+WRITE_PATTERN wr_file_256m_000255.txt 268435456
+CLOSE wr_file_256m_000000.txt
+CLOSE wr_file_256m_000001.txt
+CLOSE wr_file_256m_000002.txt
+CLOSE wr_file_256m_000003.txt
+CLOSE wr_file_256m_000004.txt
+CLOSE wr_file_256m_000005.txt
+CLOSE wr_file_256m_000006.txt
+CLOSE wr_file_256m_000007.txt
+CLOSE wr_file_256m_000008.txt
+CLOSE wr_file_256m_000009.txt
+CLOSE wr_file_256m_000010.txt
+CLOSE wr_file_256m_000011.txt
+CLOSE wr_file_256m_000012.txt
+CLOSE wr_file_256m_000013.txt
+CLOSE wr_file_256m_000014.txt
+CLOSE wr_file_256m_000015.txt
+CLOSE wr_file_256m_000016.txt
+CLOSE wr_file_256m_000017.txt
+CLOSE wr_file_256m_000018.txt
+CLOSE wr_file_256m_000019.txt
+CLOSE wr_file_256m_000020.txt
+CLOSE wr_file_256m_000021.txt
+CLOSE wr_file_256m_000022.txt
+CLOSE wr_file_256m_000023.txt
+CLOSE wr_file_256m_000024.txt
+CLOSE wr_file_256m_000025.txt
+CLOSE wr_file_256m_000026.txt
+CLOSE wr_file_256m_000027.txt
+CLOSE wr_file_256m_000028.txt
+CLOSE wr_file_256m_000029.txt
+CLOSE wr_file_256m_000030.txt
+CLOSE wr_file_256m_000031.txt
+CLOSE wr_file_256m_000032.txt
+CLOSE wr_file_256m_000033.txt
+CLOSE wr_file_256m_000034.txt
+CLOSE wr_file_256m_000035.txt
+CLOSE wr_file_256m_000036.txt
+CLOSE wr_file_256m_000037.txt
+CLOSE wr_file_256m_000038.txt
+CLOSE wr_file_256m_000039.txt
+CLOSE wr_file_256m_000040.txt
+CLOSE wr_file_256m_000041.txt
+CLOSE wr_file_256m_000042.txt
+CLOSE wr_file_256m_000043.txt
+CLOSE wr_file_256m_000044.txt
+CLOSE wr_file_256m_000045.txt
+CLOSE wr_file_256m_000046.txt
+CLOSE wr_file_256m_000047.txt
+CLOSE wr_file_256m_000048.txt
+CLOSE wr_file_256m_000049.txt
+CLOSE wr_file_256m_000050.txt
+CLOSE wr_file_256m_000051.txt
+CLOSE wr_file_256m_000052.txt
+CLOSE wr_file_256m_000053.txt
+CLOSE wr_file_256m_000054.txt
+CLOSE wr_file_256m_000055.txt
+CLOSE wr_file_256m_000056.txt
+CLOSE wr_file_256m_000057.txt
+CLOSE wr_file_256m_000058.txt
+CLOSE wr_file_256m_000059.txt
+CLOSE wr_file_256m_000060.txt
+CLOSE wr_file_256m_000061.txt
+CLOSE wr_file_256m_000062.txt
+CLOSE wr_file_256m_000063.txt
+CLOSE wr_file_256m_000064.txt
+CLOSE wr_file_256m_000065.txt
+CLOSE wr_file_256m_000066.txt
+CLOSE wr_file_256m_000067.txt
+CLOSE wr_file_256m_000068.txt
+CLOSE wr_file_256m_000069.txt
+CLOSE wr_file_256m_000070.txt
+CLOSE wr_file_256m_000071.txt
+CLOSE wr_file_256m_000072.txt
+CLOSE wr_file_256m_000073.txt
+CLOSE wr_file_256m_000074.txt
+CLOSE wr_file_256m_000075.txt
+CLOSE wr_file_256m_000076.txt
+CLOSE wr_file_256m_000077.txt
+CLOSE wr_file_256m_000078.txt
+CLOSE wr_file_256m_000079.txt
+CLOSE wr_file_256m_000080.txt
+CLOSE wr_file_256m_000081.txt
+CLOSE wr_file_256m_000082.txt
+CLOSE wr_file_256m_000083.txt
+CLOSE wr_file_256m_000084.txt
+CLOSE wr_file_256m_000085.txt
+CLOSE wr_file_256m_000086.txt
+CLOSE wr_file_256m_000087.txt
+CLOSE wr_file_256m_000088.txt
+CLOSE wr_file_256m_000089.txt
+CLOSE wr_file_256m_000090.txt
+CLOSE wr_file_256m_000091.txt
+CLOSE wr_file_256m_000092.txt
+CLOSE wr_file_256m_000093.txt
+CLOSE wr_file_256m_000094.txt
+CLOSE wr_file_256m_000095.txt
+CLOSE wr_file_256m_000096.txt
+CLOSE wr_file_256m_000097.txt
+CLOSE wr_file_256m_000098.txt
+CLOSE wr_file_256m_000099.txt
+CLOSE wr_file_256m_000100.txt
+CLOSE wr_file_256m_000101.txt
+CLOSE wr_file_256m_000102.txt
+CLOSE wr_file_256m_000103.txt
+CLOSE wr_file_256m_000104.txt
+CLOSE wr_file_256m_000105.txt
+CLOSE wr_file_256m_000106.txt
+CLOSE wr_file_256m_000107.txt
+CLOSE wr_file_256m_000108.txt
+CLOSE wr_file_256m_000109.txt
+CLOSE wr_file_256m_000110.txt
+CLOSE wr_file_256m_000111.txt
+CLOSE wr_file_256m_000112.txt
+CLOSE wr_file_256m_000113.txt
+CLOSE wr_file_256m_000114.txt
+CLOSE wr_file_256m_000115.txt
+CLOSE wr_file_256m_000116.txt
+CLOSE wr_file_256m_000117.txt
+CLOSE wr_file_256m_000118.txt
+CLOSE wr_file_256m_000119.txt
+CLOSE wr_file_256m_000120.txt
+CLOSE wr_file_256m_000121.txt
+CLOSE wr_file_256m_000122.txt
+CLOSE wr_file_256m_000123.txt
+CLOSE wr_file_256m_000124.txt
+CLOSE wr_file_256m_000125.txt
+CLOSE wr_file_256m_000126.txt
+CLOSE wr_file_256m_000127.txt
+CLOSE wr_file_256m_000128.txt
+CLOSE wr_file_256m_000129.txt
+CLOSE wr_file_256m_000130.txt
+CLOSE wr_file_256m_000131.txt
+CLOSE wr_file_256m_000132.txt
+CLOSE wr_file_256m_000133.txt
+CLOSE wr_file_256m_000134.txt
+CLOSE wr_file_256m_000135.txt
+CLOSE wr_file_256m_000136.txt
+CLOSE wr_file_256m_000137.txt
+CLOSE wr_file_256m_000138.txt
+CLOSE wr_file_256m_000139.txt
+CLOSE wr_file_256m_000140.txt
+CLOSE wr_file_256m_000141.txt
+CLOSE wr_file_256m_000142.txt
+CLOSE wr_file_256m_000143.txt
+CLOSE wr_file_256m_000144.txt
+CLOSE wr_file_256m_000145.txt
+CLOSE wr_file_256m_000146.txt
+CLOSE wr_file_256m_000147.txt
+CLOSE wr_file_256m_000148.txt
+CLOSE wr_file_256m_000149.txt
+CLOSE wr_file_256m_000150.txt
+CLOSE wr_file_256m_000151.txt
+CLOSE wr_file_256m_000152.txt
+CLOSE wr_file_256m_000153.txt
+CLOSE wr_file_256m_000154.txt
+CLOSE wr_file_256m_000155.txt
+CLOSE wr_file_256m_000156.txt
+CLOSE wr_file_256m_000157.txt
+CLOSE wr_file_256m_000158.txt
+CLOSE wr_file_256m_000159.txt
+CLOSE wr_file_256m_000160.txt
+CLOSE wr_file_256m_000161.txt
+CLOSE wr_file_256m_000162.txt
+CLOSE wr_file_256m_000163.txt
+CLOSE wr_file_256m_000164.txt
+CLOSE wr_file_256m_000165.txt
+CLOSE wr_file_256m_000166.txt
+CLOSE wr_file_256m_000167.txt
+CLOSE wr_file_256m_000168.txt
+CLOSE wr_file_256m_000169.txt
+CLOSE wr_file_256m_000170.txt
+CLOSE wr_file_256m_000171.txt
+CLOSE wr_file_256m_000172.txt
+CLOSE wr_file_256m_000173.txt
+CLOSE wr_file_256m_000174.txt
+CLOSE wr_file_256m_000175.txt
+CLOSE wr_file_256m_000176.txt
+CLOSE wr_file_256m_000177.txt
+CLOSE wr_file_256m_000178.txt
+CLOSE wr_file_256m_000179.txt
+CLOSE wr_file_256m_000180.txt
+CLOSE wr_file_256m_000181.txt
+CLOSE wr_file_256m_000182.txt
+CLOSE wr_file_256m_000183.txt
+CLOSE wr_file_256m_000184.txt
+CLOSE wr_file_256m_000185.txt
+CLOSE wr_file_256m_000186.txt
+CLOSE wr_file_256m_000187.txt
+CLOSE wr_file_256m_000188.txt
+CLOSE wr_file_256m_000189.txt
+CLOSE wr_file_256m_000190.txt
+CLOSE wr_file_256m_000191.txt
+CLOSE wr_file_256m_000192.txt
+CLOSE wr_file_256m_000193.txt
+CLOSE wr_file_256m_000194.txt
+CLOSE wr_file_256m_000195.txt
+CLOSE wr_file_256m_000196.txt
+CLOSE wr_file_256m_000197.txt
+CLOSE wr_file_256m_000198.txt
+CLOSE wr_file_256m_000199.txt
+CLOSE wr_file_256m_000200.txt
+CLOSE wr_file_256m_000201.txt
+CLOSE wr_file_256m_000202.txt
+CLOSE wr_file_256m_000203.txt
+CLOSE wr_file_256m_000204.txt
+CLOSE wr_file_256m_000205.txt
+CLOSE wr_file_256m_000206.txt
+CLOSE wr_file_256m_000207.txt
+CLOSE wr_file_256m_000208.txt
+CLOSE wr_file_256m_000209.txt
+CLOSE wr_file_256m_000210.txt
+CLOSE wr_file_256m_000211.txt
+CLOSE wr_file_256m_000212.txt
+CLOSE wr_file_256m_000213.txt
+CLOSE wr_file_256m_000214.txt
+CLOSE wr_file_256m_000215.txt
+CLOSE wr_file_256m_000216.txt
+CLOSE wr_file_256m_000217.txt
+CLOSE wr_file_256m_000218.txt
+CLOSE wr_file_256m_000219.txt
+CLOSE wr_file_256m_000220.txt
+CLOSE wr_file_256m_000221.txt
+CLOSE wr_file_256m_000222.txt
+CLOSE wr_file_256m_000223.txt
+CLOSE wr_file_256m_000224.txt
+CLOSE wr_file_256m_000225.txt
+CLOSE wr_file_256m_000226.txt
+CLOSE wr_file_256m_000227.txt
+CLOSE wr_file_256m_000228.txt
+CLOSE wr_file_256m_000229.txt
+CLOSE wr_file_256m_000230.txt
+CLOSE wr_file_256m_000231.txt
+CLOSE wr_file_256m_000232.txt
+CLOSE wr_file_256m_000233.txt
+CLOSE wr_file_256m_000234.txt
+CLOSE wr_file_256m_000235.txt
+CLOSE wr_file_256m_000236.txt
+CLOSE wr_file_256m_000237.txt
+CLOSE wr_file_256m_000238.txt
+CLOSE wr_file_256m_000239.txt
+CLOSE wr_file_256m_000240.txt
+CLOSE wr_file_256m_000241.txt
+CLOSE wr_file_256m_000242.txt
+CLOSE wr_file_256m_000243.txt
+CLOSE wr_file_256m_000244.txt
+CLOSE wr_file_256m_000245.txt
+CLOSE wr_file_256m_000246.txt
+CLOSE wr_file_256m_000247.txt
+CLOSE wr_file_256m_000248.txt
+CLOSE wr_file_256m_000249.txt
+CLOSE wr_file_256m_000250.txt
+CLOSE wr_file_256m_000251.txt
+CLOSE wr_file_256m_000252.txt
+CLOSE wr_file_256m_000253.txt
+CLOSE wr_file_256m_000254.txt
+CLOSE wr_file_256m_000255.txt
+
+# Phase 3: Read all files
+OPEN wr_file_256m_000000.txt
+OPEN wr_file_256m_000001.txt
+OPEN wr_file_256m_000002.txt
+OPEN wr_file_256m_000003.txt
+OPEN wr_file_256m_000004.txt
+OPEN wr_file_256m_000005.txt
+OPEN wr_file_256m_000006.txt
+OPEN wr_file_256m_000007.txt
+OPEN wr_file_256m_000008.txt
+OPEN wr_file_256m_000009.txt
+OPEN wr_file_256m_000010.txt
+OPEN wr_file_256m_000011.txt
+OPEN wr_file_256m_000012.txt
+OPEN wr_file_256m_000013.txt
+OPEN wr_file_256m_000014.txt
+OPEN wr_file_256m_000015.txt
+OPEN wr_file_256m_000016.txt
+OPEN wr_file_256m_000017.txt
+OPEN wr_file_256m_000018.txt
+OPEN wr_file_256m_000019.txt
+OPEN wr_file_256m_000020.txt
+OPEN wr_file_256m_000021.txt
+OPEN wr_file_256m_000022.txt
+OPEN wr_file_256m_000023.txt
+OPEN wr_file_256m_000024.txt
+OPEN wr_file_256m_000025.txt
+OPEN wr_file_256m_000026.txt
+OPEN wr_file_256m_000027.txt
+OPEN wr_file_256m_000028.txt
+OPEN wr_file_256m_000029.txt
+OPEN wr_file_256m_000030.txt
+OPEN wr_file_256m_000031.txt
+OPEN wr_file_256m_000032.txt
+OPEN wr_file_256m_000033.txt
+OPEN wr_file_256m_000034.txt
+OPEN wr_file_256m_000035.txt
+OPEN wr_file_256m_000036.txt
+OPEN wr_file_256m_000037.txt
+OPEN wr_file_256m_000038.txt
+OPEN wr_file_256m_000039.txt
+OPEN wr_file_256m_000040.txt
+OPEN wr_file_256m_000041.txt
+OPEN wr_file_256m_000042.txt
+OPEN wr_file_256m_000043.txt
+OPEN wr_file_256m_000044.txt
+OPEN wr_file_256m_000045.txt
+OPEN wr_file_256m_000046.txt
+OPEN wr_file_256m_000047.txt
+OPEN wr_file_256m_000048.txt
+OPEN wr_file_256m_000049.txt
+OPEN wr_file_256m_000050.txt
+OPEN wr_file_256m_000051.txt
+OPEN wr_file_256m_000052.txt
+OPEN wr_file_256m_000053.txt
+OPEN wr_file_256m_000054.txt
+OPEN wr_file_256m_000055.txt
+OPEN wr_file_256m_000056.txt
+OPEN wr_file_256m_000057.txt
+OPEN wr_file_256m_000058.txt
+OPEN wr_file_256m_000059.txt
+OPEN wr_file_256m_000060.txt
+OPEN wr_file_256m_000061.txt
+OPEN wr_file_256m_000062.txt
+OPEN wr_file_256m_000063.txt
+OPEN wr_file_256m_000064.txt
+OPEN wr_file_256m_000065.txt
+OPEN wr_file_256m_000066.txt
+OPEN wr_file_256m_000067.txt
+OPEN wr_file_256m_000068.txt
+OPEN wr_file_256m_000069.txt
+OPEN wr_file_256m_000070.txt
+OPEN wr_file_256m_000071.txt
+OPEN wr_file_256m_000072.txt
+OPEN wr_file_256m_000073.txt
+OPEN wr_file_256m_000074.txt
+OPEN wr_file_256m_000075.txt
+OPEN wr_file_256m_000076.txt
+OPEN wr_file_256m_000077.txt
+OPEN wr_file_256m_000078.txt
+OPEN wr_file_256m_000079.txt
+OPEN wr_file_256m_000080.txt
+OPEN wr_file_256m_000081.txt
+OPEN wr_file_256m_000082.txt
+OPEN wr_file_256m_000083.txt
+OPEN wr_file_256m_000084.txt
+OPEN wr_file_256m_000085.txt
+OPEN wr_file_256m_000086.txt
+OPEN wr_file_256m_000087.txt
+OPEN wr_file_256m_000088.txt
+OPEN wr_file_256m_000089.txt
+OPEN wr_file_256m_000090.txt
+OPEN wr_file_256m_000091.txt
+OPEN wr_file_256m_000092.txt
+OPEN wr_file_256m_000093.txt
+OPEN wr_file_256m_000094.txt
+OPEN wr_file_256m_000095.txt
+OPEN wr_file_256m_000096.txt
+OPEN wr_file_256m_000097.txt
+OPEN wr_file_256m_000098.txt
+OPEN wr_file_256m_000099.txt
+OPEN wr_file_256m_000100.txt
+OPEN wr_file_256m_000101.txt
+OPEN wr_file_256m_000102.txt
+OPEN wr_file_256m_000103.txt
+OPEN wr_file_256m_000104.txt
+OPEN wr_file_256m_000105.txt
+OPEN wr_file_256m_000106.txt
+OPEN wr_file_256m_000107.txt
+OPEN wr_file_256m_000108.txt
+OPEN wr_file_256m_000109.txt
+OPEN wr_file_256m_000110.txt
+OPEN wr_file_256m_000111.txt
+OPEN wr_file_256m_000112.txt
+OPEN wr_file_256m_000113.txt
+OPEN wr_file_256m_000114.txt
+OPEN wr_file_256m_000115.txt
+OPEN wr_file_256m_000116.txt
+OPEN wr_file_256m_000117.txt
+OPEN wr_file_256m_000118.txt
+OPEN wr_file_256m_000119.txt
+OPEN wr_file_256m_000120.txt
+OPEN wr_file_256m_000121.txt
+OPEN wr_file_256m_000122.txt
+OPEN wr_file_256m_000123.txt
+OPEN wr_file_256m_000124.txt
+OPEN wr_file_256m_000125.txt
+OPEN wr_file_256m_000126.txt
+OPEN wr_file_256m_000127.txt
+OPEN wr_file_256m_000128.txt
+OPEN wr_file_256m_000129.txt
+OPEN wr_file_256m_000130.txt
+OPEN wr_file_256m_000131.txt
+OPEN wr_file_256m_000132.txt
+OPEN wr_file_256m_000133.txt
+OPEN wr_file_256m_000134.txt
+OPEN wr_file_256m_000135.txt
+OPEN wr_file_256m_000136.txt
+OPEN wr_file_256m_000137.txt
+OPEN wr_file_256m_000138.txt
+OPEN wr_file_256m_000139.txt
+OPEN wr_file_256m_000140.txt
+OPEN wr_file_256m_000141.txt
+OPEN wr_file_256m_000142.txt
+OPEN wr_file_256m_000143.txt
+OPEN wr_file_256m_000144.txt
+OPEN wr_file_256m_000145.txt
+OPEN wr_file_256m_000146.txt
+OPEN wr_file_256m_000147.txt
+OPEN wr_file_256m_000148.txt
+OPEN wr_file_256m_000149.txt
+OPEN wr_file_256m_000150.txt
+OPEN wr_file_256m_000151.txt
+OPEN wr_file_256m_000152.txt
+OPEN wr_file_256m_000153.txt
+OPEN wr_file_256m_000154.txt
+OPEN wr_file_256m_000155.txt
+OPEN wr_file_256m_000156.txt
+OPEN wr_file_256m_000157.txt
+OPEN wr_file_256m_000158.txt
+OPEN wr_file_256m_000159.txt
+OPEN wr_file_256m_000160.txt
+OPEN wr_file_256m_000161.txt
+OPEN wr_file_256m_000162.txt
+OPEN wr_file_256m_000163.txt
+OPEN wr_file_256m_000164.txt
+OPEN wr_file_256m_000165.txt
+OPEN wr_file_256m_000166.txt
+OPEN wr_file_256m_000167.txt
+OPEN wr_file_256m_000168.txt
+OPEN wr_file_256m_000169.txt
+OPEN wr_file_256m_000170.txt
+OPEN wr_file_256m_000171.txt
+OPEN wr_file_256m_000172.txt
+OPEN wr_file_256m_000173.txt
+OPEN wr_file_256m_000174.txt
+OPEN wr_file_256m_000175.txt
+OPEN wr_file_256m_000176.txt
+OPEN wr_file_256m_000177.txt
+OPEN wr_file_256m_000178.txt
+OPEN wr_file_256m_000179.txt
+OPEN wr_file_256m_000180.txt
+OPEN wr_file_256m_000181.txt
+OPEN wr_file_256m_000182.txt
+OPEN wr_file_256m_000183.txt
+OPEN wr_file_256m_000184.txt
+OPEN wr_file_256m_000185.txt
+OPEN wr_file_256m_000186.txt
+OPEN wr_file_256m_000187.txt
+OPEN wr_file_256m_000188.txt
+OPEN wr_file_256m_000189.txt
+OPEN wr_file_256m_000190.txt
+OPEN wr_file_256m_000191.txt
+OPEN wr_file_256m_000192.txt
+OPEN wr_file_256m_000193.txt
+OPEN wr_file_256m_000194.txt
+OPEN wr_file_256m_000195.txt
+OPEN wr_file_256m_000196.txt
+OPEN wr_file_256m_000197.txt
+OPEN wr_file_256m_000198.txt
+OPEN wr_file_256m_000199.txt
+OPEN wr_file_256m_000200.txt
+OPEN wr_file_256m_000201.txt
+OPEN wr_file_256m_000202.txt
+OPEN wr_file_256m_000203.txt
+OPEN wr_file_256m_000204.txt
+OPEN wr_file_256m_000205.txt
+OPEN wr_file_256m_000206.txt
+OPEN wr_file_256m_000207.txt
+OPEN wr_file_256m_000208.txt
+OPEN wr_file_256m_000209.txt
+OPEN wr_file_256m_000210.txt
+OPEN wr_file_256m_000211.txt
+OPEN wr_file_256m_000212.txt
+OPEN wr_file_256m_000213.txt
+OPEN wr_file_256m_000214.txt
+OPEN wr_file_256m_000215.txt
+OPEN wr_file_256m_000216.txt
+OPEN wr_file_256m_000217.txt
+OPEN wr_file_256m_000218.txt
+OPEN wr_file_256m_000219.txt
+OPEN wr_file_256m_000220.txt
+OPEN wr_file_256m_000221.txt
+OPEN wr_file_256m_000222.txt
+OPEN wr_file_256m_000223.txt
+OPEN wr_file_256m_000224.txt
+OPEN wr_file_256m_000225.txt
+OPEN wr_file_256m_000226.txt
+OPEN wr_file_256m_000227.txt
+OPEN wr_file_256m_000228.txt
+OPEN wr_file_256m_000229.txt
+OPEN wr_file_256m_000230.txt
+OPEN wr_file_256m_000231.txt
+OPEN wr_file_256m_000232.txt
+OPEN wr_file_256m_000233.txt
+OPEN wr_file_256m_000234.txt
+OPEN wr_file_256m_000235.txt
+OPEN wr_file_256m_000236.txt
+OPEN wr_file_256m_000237.txt
+OPEN wr_file_256m_000238.txt
+OPEN wr_file_256m_000239.txt
+OPEN wr_file_256m_000240.txt
+OPEN wr_file_256m_000241.txt
+OPEN wr_file_256m_000242.txt
+OPEN wr_file_256m_000243.txt
+OPEN wr_file_256m_000244.txt
+OPEN wr_file_256m_000245.txt
+OPEN wr_file_256m_000246.txt
+OPEN wr_file_256m_000247.txt
+OPEN wr_file_256m_000248.txt
+OPEN wr_file_256m_000249.txt
+OPEN wr_file_256m_000250.txt
+OPEN wr_file_256m_000251.txt
+OPEN wr_file_256m_000252.txt
+OPEN wr_file_256m_000253.txt
+OPEN wr_file_256m_000254.txt
+OPEN wr_file_256m_000255.txt
+READ wr_file_256m_000000.txt
+READ wr_file_256m_000001.txt
+READ wr_file_256m_000002.txt
+READ wr_file_256m_000003.txt
+READ wr_file_256m_000004.txt
+READ wr_file_256m_000005.txt
+READ wr_file_256m_000006.txt
+READ wr_file_256m_000007.txt
+READ wr_file_256m_000008.txt
+READ wr_file_256m_000009.txt
+READ wr_file_256m_000010.txt
+READ wr_file_256m_000011.txt
+READ wr_file_256m_000012.txt
+READ wr_file_256m_000013.txt
+READ wr_file_256m_000014.txt
+READ wr_file_256m_000015.txt
+READ wr_file_256m_000016.txt
+READ wr_file_256m_000017.txt
+READ wr_file_256m_000018.txt
+READ wr_file_256m_000019.txt
+READ wr_file_256m_000020.txt
+READ wr_file_256m_000021.txt
+READ wr_file_256m_000022.txt
+READ wr_file_256m_000023.txt
+READ wr_file_256m_000024.txt
+READ wr_file_256m_000025.txt
+READ wr_file_256m_000026.txt
+READ wr_file_256m_000027.txt
+READ wr_file_256m_000028.txt
+READ wr_file_256m_000029.txt
+READ wr_file_256m_000030.txt
+READ wr_file_256m_000031.txt
+READ wr_file_256m_000032.txt
+READ wr_file_256m_000033.txt
+READ wr_file_256m_000034.txt
+READ wr_file_256m_000035.txt
+READ wr_file_256m_000036.txt
+READ wr_file_256m_000037.txt
+READ wr_file_256m_000038.txt
+READ wr_file_256m_000039.txt
+READ wr_file_256m_000040.txt
+READ wr_file_256m_000041.txt
+READ wr_file_256m_000042.txt
+READ wr_file_256m_000043.txt
+READ wr_file_256m_000044.txt
+READ wr_file_256m_000045.txt
+READ wr_file_256m_000046.txt
+READ wr_file_256m_000047.txt
+READ wr_file_256m_000048.txt
+READ wr_file_256m_000049.txt
+READ wr_file_256m_000050.txt
+READ wr_file_256m_000051.txt
+READ wr_file_256m_000052.txt
+READ wr_file_256m_000053.txt
+READ wr_file_256m_000054.txt
+READ wr_file_256m_000055.txt
+READ wr_file_256m_000056.txt
+READ wr_file_256m_000057.txt
+READ wr_file_256m_000058.txt
+READ wr_file_256m_000059.txt
+READ wr_file_256m_000060.txt
+READ wr_file_256m_000061.txt
+READ wr_file_256m_000062.txt
+READ wr_file_256m_000063.txt
+READ wr_file_256m_000064.txt
+READ wr_file_256m_000065.txt
+READ wr_file_256m_000066.txt
+READ wr_file_256m_000067.txt
+READ wr_file_256m_000068.txt
+READ wr_file_256m_000069.txt
+READ wr_file_256m_000070.txt
+READ wr_file_256m_000071.txt
+READ wr_file_256m_000072.txt
+READ wr_file_256m_000073.txt
+READ wr_file_256m_000074.txt
+READ wr_file_256m_000075.txt
+READ wr_file_256m_000076.txt
+READ wr_file_256m_000077.txt
+READ wr_file_256m_000078.txt
+READ wr_file_256m_000079.txt
+READ wr_file_256m_000080.txt
+READ wr_file_256m_000081.txt
+READ wr_file_256m_000082.txt
+READ wr_file_256m_000083.txt
+READ wr_file_256m_000084.txt
+READ wr_file_256m_000085.txt
+READ wr_file_256m_000086.txt
+READ wr_file_256m_000087.txt
+READ wr_file_256m_000088.txt
+READ wr_file_256m_000089.txt
+READ wr_file_256m_000090.txt
+READ wr_file_256m_000091.txt
+READ wr_file_256m_000092.txt
+READ wr_file_256m_000093.txt
+READ wr_file_256m_000094.txt
+READ wr_file_256m_000095.txt
+READ wr_file_256m_000096.txt
+READ wr_file_256m_000097.txt
+READ wr_file_256m_000098.txt
+READ wr_file_256m_000099.txt
+READ wr_file_256m_000100.txt
+READ wr_file_256m_000101.txt
+READ wr_file_256m_000102.txt
+READ wr_file_256m_000103.txt
+READ wr_file_256m_000104.txt
+READ wr_file_256m_000105.txt
+READ wr_file_256m_000106.txt
+READ wr_file_256m_000107.txt
+READ wr_file_256m_000108.txt
+READ wr_file_256m_000109.txt
+READ wr_file_256m_000110.txt
+READ wr_file_256m_000111.txt
+READ wr_file_256m_000112.txt
+READ wr_file_256m_000113.txt
+READ wr_file_256m_000114.txt
+READ wr_file_256m_000115.txt
+READ wr_file_256m_000116.txt
+READ wr_file_256m_000117.txt
+READ wr_file_256m_000118.txt
+READ wr_file_256m_000119.txt
+READ wr_file_256m_000120.txt
+READ wr_file_256m_000121.txt
+READ wr_file_256m_000122.txt
+READ wr_file_256m_000123.txt
+READ wr_file_256m_000124.txt
+READ wr_file_256m_000125.txt
+READ wr_file_256m_000126.txt
+READ wr_file_256m_000127.txt
+READ wr_file_256m_000128.txt
+READ wr_file_256m_000129.txt
+READ wr_file_256m_000130.txt
+READ wr_file_256m_000131.txt
+READ wr_file_256m_000132.txt
+READ wr_file_256m_000133.txt
+READ wr_file_256m_000134.txt
+READ wr_file_256m_000135.txt
+READ wr_file_256m_000136.txt
+READ wr_file_256m_000137.txt
+READ wr_file_256m_000138.txt
+READ wr_file_256m_000139.txt
+READ wr_file_256m_000140.txt
+READ wr_file_256m_000141.txt
+READ wr_file_256m_000142.txt
+READ wr_file_256m_000143.txt
+READ wr_file_256m_000144.txt
+READ wr_file_256m_000145.txt
+READ wr_file_256m_000146.txt
+READ wr_file_256m_000147.txt
+READ wr_file_256m_000148.txt
+READ wr_file_256m_000149.txt
+READ wr_file_256m_000150.txt
+READ wr_file_256m_000151.txt
+READ wr_file_256m_000152.txt
+READ wr_file_256m_000153.txt
+READ wr_file_256m_000154.txt
+READ wr_file_256m_000155.txt
+READ wr_file_256m_000156.txt
+READ wr_file_256m_000157.txt
+READ wr_file_256m_000158.txt
+READ wr_file_256m_000159.txt
+READ wr_file_256m_000160.txt
+READ wr_file_256m_000161.txt
+READ wr_file_256m_000162.txt
+READ wr_file_256m_000163.txt
+READ wr_file_256m_000164.txt
+READ wr_file_256m_000165.txt
+READ wr_file_256m_000166.txt
+READ wr_file_256m_000167.txt
+READ wr_file_256m_000168.txt
+READ wr_file_256m_000169.txt
+READ wr_file_256m_000170.txt
+READ wr_file_256m_000171.txt
+READ wr_file_256m_000172.txt
+READ wr_file_256m_000173.txt
+READ wr_file_256m_000174.txt
+READ wr_file_256m_000175.txt
+READ wr_file_256m_000176.txt
+READ wr_file_256m_000177.txt
+READ wr_file_256m_000178.txt
+READ wr_file_256m_000179.txt
+READ wr_file_256m_000180.txt
+READ wr_file_256m_000181.txt
+READ wr_file_256m_000182.txt
+READ wr_file_256m_000183.txt
+READ wr_file_256m_000184.txt
+READ wr_file_256m_000185.txt
+READ wr_file_256m_000186.txt
+READ wr_file_256m_000187.txt
+READ wr_file_256m_000188.txt
+READ wr_file_256m_000189.txt
+READ wr_file_256m_000190.txt
+READ wr_file_256m_000191.txt
+READ wr_file_256m_000192.txt
+READ wr_file_256m_000193.txt
+READ wr_file_256m_000194.txt
+READ wr_file_256m_000195.txt
+READ wr_file_256m_000196.txt
+READ wr_file_256m_000197.txt
+READ wr_file_256m_000198.txt
+READ wr_file_256m_000199.txt
+READ wr_file_256m_000200.txt
+READ wr_file_256m_000201.txt
+READ wr_file_256m_000202.txt
+READ wr_file_256m_000203.txt
+READ wr_file_256m_000204.txt
+READ wr_file_256m_000205.txt
+READ wr_file_256m_000206.txt
+READ wr_file_256m_000207.txt
+READ wr_file_256m_000208.txt
+READ wr_file_256m_000209.txt
+READ wr_file_256m_000210.txt
+READ wr_file_256m_000211.txt
+READ wr_file_256m_000212.txt
+READ wr_file_256m_000213.txt
+READ wr_file_256m_000214.txt
+READ wr_file_256m_000215.txt
+READ wr_file_256m_000216.txt
+READ wr_file_256m_000217.txt
+READ wr_file_256m_000218.txt
+READ wr_file_256m_000219.txt
+READ wr_file_256m_000220.txt
+READ wr_file_256m_000221.txt
+READ wr_file_256m_000222.txt
+READ wr_file_256m_000223.txt
+READ wr_file_256m_000224.txt
+READ wr_file_256m_000225.txt
+READ wr_file_256m_000226.txt
+READ wr_file_256m_000227.txt
+READ wr_file_256m_000228.txt
+READ wr_file_256m_000229.txt
+READ wr_file_256m_000230.txt
+READ wr_file_256m_000231.txt
+READ wr_file_256m_000232.txt
+READ wr_file_256m_000233.txt
+READ wr_file_256m_000234.txt
+READ wr_file_256m_000235.txt
+READ wr_file_256m_000236.txt
+READ wr_file_256m_000237.txt
+READ wr_file_256m_000238.txt
+READ wr_file_256m_000239.txt
+READ wr_file_256m_000240.txt
+READ wr_file_256m_000241.txt
+READ wr_file_256m_000242.txt
+READ wr_file_256m_000243.txt
+READ wr_file_256m_000244.txt
+READ wr_file_256m_000245.txt
+READ wr_file_256m_000246.txt
+READ wr_file_256m_000247.txt
+READ wr_file_256m_000248.txt
+READ wr_file_256m_000249.txt
+READ wr_file_256m_000250.txt
+READ wr_file_256m_000251.txt
+READ wr_file_256m_000252.txt
+READ wr_file_256m_000253.txt
+READ wr_file_256m_000254.txt
+READ wr_file_256m_000255.txt
+
+# End timing
+END
+
+# Close all files
+CLOSE wr_file_256m_000000.txt
+CLOSE wr_file_256m_000001.txt
+CLOSE wr_file_256m_000002.txt
+CLOSE wr_file_256m_000003.txt
+CLOSE wr_file_256m_000004.txt
+CLOSE wr_file_256m_000005.txt
+CLOSE wr_file_256m_000006.txt
+CLOSE wr_file_256m_000007.txt
+CLOSE wr_file_256m_000008.txt
+CLOSE wr_file_256m_000009.txt
+CLOSE wr_file_256m_000010.txt
+CLOSE wr_file_256m_000011.txt
+CLOSE wr_file_256m_000012.txt
+CLOSE wr_file_256m_000013.txt
+CLOSE wr_file_256m_000014.txt
+CLOSE wr_file_256m_000015.txt
+CLOSE wr_file_256m_000016.txt
+CLOSE wr_file_256m_000017.txt
+CLOSE wr_file_256m_000018.txt
+CLOSE wr_file_256m_000019.txt
+CLOSE wr_file_256m_000020.txt
+CLOSE wr_file_256m_000021.txt
+CLOSE wr_file_256m_000022.txt
+CLOSE wr_file_256m_000023.txt
+CLOSE wr_file_256m_000024.txt
+CLOSE wr_file_256m_000025.txt
+CLOSE wr_file_256m_000026.txt
+CLOSE wr_file_256m_000027.txt
+CLOSE wr_file_256m_000028.txt
+CLOSE wr_file_256m_000029.txt
+CLOSE wr_file_256m_000030.txt
+CLOSE wr_file_256m_000031.txt
+CLOSE wr_file_256m_000032.txt
+CLOSE wr_file_256m_000033.txt
+CLOSE wr_file_256m_000034.txt
+CLOSE wr_file_256m_000035.txt
+CLOSE wr_file_256m_000036.txt
+CLOSE wr_file_256m_000037.txt
+CLOSE wr_file_256m_000038.txt
+CLOSE wr_file_256m_000039.txt
+CLOSE wr_file_256m_000040.txt
+CLOSE wr_file_256m_000041.txt
+CLOSE wr_file_256m_000042.txt
+CLOSE wr_file_256m_000043.txt
+CLOSE wr_file_256m_000044.txt
+CLOSE wr_file_256m_000045.txt
+CLOSE wr_file_256m_000046.txt
+CLOSE wr_file_256m_000047.txt
+CLOSE wr_file_256m_000048.txt
+CLOSE wr_file_256m_000049.txt
+CLOSE wr_file_256m_000050.txt
+CLOSE wr_file_256m_000051.txt
+CLOSE wr_file_256m_000052.txt
+CLOSE wr_file_256m_000053.txt
+CLOSE wr_file_256m_000054.txt
+CLOSE wr_file_256m_000055.txt
+CLOSE wr_file_256m_000056.txt
+CLOSE wr_file_256m_000057.txt
+CLOSE wr_file_256m_000058.txt
+CLOSE wr_file_256m_000059.txt
+CLOSE wr_file_256m_000060.txt
+CLOSE wr_file_256m_000061.txt
+CLOSE wr_file_256m_000062.txt
+CLOSE wr_file_256m_000063.txt
+CLOSE wr_file_256m_000064.txt
+CLOSE wr_file_256m_000065.txt
+CLOSE wr_file_256m_000066.txt
+CLOSE wr_file_256m_000067.txt
+CLOSE wr_file_256m_000068.txt
+CLOSE wr_file_256m_000069.txt
+CLOSE wr_file_256m_000070.txt
+CLOSE wr_file_256m_000071.txt
+CLOSE wr_file_256m_000072.txt
+CLOSE wr_file_256m_000073.txt
+CLOSE wr_file_256m_000074.txt
+CLOSE wr_file_256m_000075.txt
+CLOSE wr_file_256m_000076.txt
+CLOSE wr_file_256m_000077.txt
+CLOSE wr_file_256m_000078.txt
+CLOSE wr_file_256m_000079.txt
+CLOSE wr_file_256m_000080.txt
+CLOSE wr_file_256m_000081.txt
+CLOSE wr_file_256m_000082.txt
+CLOSE wr_file_256m_000083.txt
+CLOSE wr_file_256m_000084.txt
+CLOSE wr_file_256m_000085.txt
+CLOSE wr_file_256m_000086.txt
+CLOSE wr_file_256m_000087.txt
+CLOSE wr_file_256m_000088.txt
+CLOSE wr_file_256m_000089.txt
+CLOSE wr_file_256m_000090.txt
+CLOSE wr_file_256m_000091.txt
+CLOSE wr_file_256m_000092.txt
+CLOSE wr_file_256m_000093.txt
+CLOSE wr_file_256m_000094.txt
+CLOSE wr_file_256m_000095.txt
+CLOSE wr_file_256m_000096.txt
+CLOSE wr_file_256m_000097.txt
+CLOSE wr_file_256m_000098.txt
+CLOSE wr_file_256m_000099.txt
+CLOSE wr_file_256m_000100.txt
+CLOSE wr_file_256m_000101.txt
+CLOSE wr_file_256m_000102.txt
+CLOSE wr_file_256m_000103.txt
+CLOSE wr_file_256m_000104.txt
+CLOSE wr_file_256m_000105.txt
+CLOSE wr_file_256m_000106.txt
+CLOSE wr_file_256m_000107.txt
+CLOSE wr_file_256m_000108.txt
+CLOSE wr_file_256m_000109.txt
+CLOSE wr_file_256m_000110.txt
+CLOSE wr_file_256m_000111.txt
+CLOSE wr_file_256m_000112.txt
+CLOSE wr_file_256m_000113.txt
+CLOSE wr_file_256m_000114.txt
+CLOSE wr_file_256m_000115.txt
+CLOSE wr_file_256m_000116.txt
+CLOSE wr_file_256m_000117.txt
+CLOSE wr_file_256m_000118.txt
+CLOSE wr_file_256m_000119.txt
+CLOSE wr_file_256m_000120.txt
+CLOSE wr_file_256m_000121.txt
+CLOSE wr_file_256m_000122.txt
+CLOSE wr_file_256m_000123.txt
+CLOSE wr_file_256m_000124.txt
+CLOSE wr_file_256m_000125.txt
+CLOSE wr_file_256m_000126.txt
+CLOSE wr_file_256m_000127.txt
+CLOSE wr_file_256m_000128.txt
+CLOSE wr_file_256m_000129.txt
+CLOSE wr_file_256m_000130.txt
+CLOSE wr_file_256m_000131.txt
+CLOSE wr_file_256m_000132.txt
+CLOSE wr_file_256m_000133.txt
+CLOSE wr_file_256m_000134.txt
+CLOSE wr_file_256m_000135.txt
+CLOSE wr_file_256m_000136.txt
+CLOSE wr_file_256m_000137.txt
+CLOSE wr_file_256m_000138.txt
+CLOSE wr_file_256m_000139.txt
+CLOSE wr_file_256m_000140.txt
+CLOSE wr_file_256m_000141.txt
+CLOSE wr_file_256m_000142.txt
+CLOSE wr_file_256m_000143.txt
+CLOSE wr_file_256m_000144.txt
+CLOSE wr_file_256m_000145.txt
+CLOSE wr_file_256m_000146.txt
+CLOSE wr_file_256m_000147.txt
+CLOSE wr_file_256m_000148.txt
+CLOSE wr_file_256m_000149.txt
+CLOSE wr_file_256m_000150.txt
+CLOSE wr_file_256m_000151.txt
+CLOSE wr_file_256m_000152.txt
+CLOSE wr_file_256m_000153.txt
+CLOSE wr_file_256m_000154.txt
+CLOSE wr_file_256m_000155.txt
+CLOSE wr_file_256m_000156.txt
+CLOSE wr_file_256m_000157.txt
+CLOSE wr_file_256m_000158.txt
+CLOSE wr_file_256m_000159.txt
+CLOSE wr_file_256m_000160.txt
+CLOSE wr_file_256m_000161.txt
+CLOSE wr_file_256m_000162.txt
+CLOSE wr_file_256m_000163.txt
+CLOSE wr_file_256m_000164.txt
+CLOSE wr_file_256m_000165.txt
+CLOSE wr_file_256m_000166.txt
+CLOSE wr_file_256m_000167.txt
+CLOSE wr_file_256m_000168.txt
+CLOSE wr_file_256m_000169.txt
+CLOSE wr_file_256m_000170.txt
+CLOSE wr_file_256m_000171.txt
+CLOSE wr_file_256m_000172.txt
+CLOSE wr_file_256m_000173.txt
+CLOSE wr_file_256m_000174.txt
+CLOSE wr_file_256m_000175.txt
+CLOSE wr_file_256m_000176.txt
+CLOSE wr_file_256m_000177.txt
+CLOSE wr_file_256m_000178.txt
+CLOSE wr_file_256m_000179.txt
+CLOSE wr_file_256m_000180.txt
+CLOSE wr_file_256m_000181.txt
+CLOSE wr_file_256m_000182.txt
+CLOSE wr_file_256m_000183.txt
+CLOSE wr_file_256m_000184.txt
+CLOSE wr_file_256m_000185.txt
+CLOSE wr_file_256m_000186.txt
+CLOSE wr_file_256m_000187.txt
+CLOSE wr_file_256m_000188.txt
+CLOSE wr_file_256m_000189.txt
+CLOSE wr_file_256m_000190.txt
+CLOSE wr_file_256m_000191.txt
+CLOSE wr_file_256m_000192.txt
+CLOSE wr_file_256m_000193.txt
+CLOSE wr_file_256m_000194.txt
+CLOSE wr_file_256m_000195.txt
+CLOSE wr_file_256m_000196.txt
+CLOSE wr_file_256m_000197.txt
+CLOSE wr_file_256m_000198.txt
+CLOSE wr_file_256m_000199.txt
+CLOSE wr_file_256m_000200.txt
+CLOSE wr_file_256m_000201.txt
+CLOSE wr_file_256m_000202.txt
+CLOSE wr_file_256m_000203.txt
+CLOSE wr_file_256m_000204.txt
+CLOSE wr_file_256m_000205.txt
+CLOSE wr_file_256m_000206.txt
+CLOSE wr_file_256m_000207.txt
+CLOSE wr_file_256m_000208.txt
+CLOSE wr_file_256m_000209.txt
+CLOSE wr_file_256m_000210.txt
+CLOSE wr_file_256m_000211.txt
+CLOSE wr_file_256m_000212.txt
+CLOSE wr_file_256m_000213.txt
+CLOSE wr_file_256m_000214.txt
+CLOSE wr_file_256m_000215.txt
+CLOSE wr_file_256m_000216.txt
+CLOSE wr_file_256m_000217.txt
+CLOSE wr_file_256m_000218.txt
+CLOSE wr_file_256m_000219.txt
+CLOSE wr_file_256m_000220.txt
+CLOSE wr_file_256m_000221.txt
+CLOSE wr_file_256m_000222.txt
+CLOSE wr_file_256m_000223.txt
+CLOSE wr_file_256m_000224.txt
+CLOSE wr_file_256m_000225.txt
+CLOSE wr_file_256m_000226.txt
+CLOSE wr_file_256m_000227.txt
+CLOSE wr_file_256m_000228.txt
+CLOSE wr_file_256m_000229.txt
+CLOSE wr_file_256m_000230.txt
+CLOSE wr_file_256m_000231.txt
+CLOSE wr_file_256m_000232.txt
+CLOSE wr_file_256m_000233.txt
+CLOSE wr_file_256m_000234.txt
+CLOSE wr_file_256m_000235.txt
+CLOSE wr_file_256m_000236.txt
+CLOSE wr_file_256m_000237.txt
+CLOSE wr_file_256m_000238.txt
+CLOSE wr_file_256m_000239.txt
+CLOSE wr_file_256m_000240.txt
+CLOSE wr_file_256m_000241.txt
+CLOSE wr_file_256m_000242.txt
+CLOSE wr_file_256m_000243.txt
+CLOSE wr_file_256m_000244.txt
+CLOSE wr_file_256m_000245.txt
+CLOSE wr_file_256m_000246.txt
+CLOSE wr_file_256m_000247.txt
+CLOSE wr_file_256m_000248.txt
+CLOSE wr_file_256m_000249.txt
+CLOSE wr_file_256m_000250.txt
+CLOSE wr_file_256m_000251.txt
+CLOSE wr_file_256m_000252.txt
+CLOSE wr_file_256m_000253.txt
+CLOSE wr_file_256m_000254.txt
+CLOSE wr_file_256m_000255.txt

@@ -1,0 +1,845 @@
+{
+  "nodes": {
+    "accelstore-src": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "spdk-src": "spdk-src"
+      },
+      "locked": {
+        "lastModified": 1789935671,
+        "narHash": "sha256-XI7CYYNdwVsxUJdesl8PkucTHzGjHdoN/6o3jvSEA9Y=",
+        "owner": "TUM-DSE",
+        "repo": "CVM-Store",
+        "rev": "15a538d561fe30b84d3fbac7b6e991372f4d6369",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TUM-DSE",
+        "ref": "main",
+        "repo": "CVM-Store",
+        "type": "github"
+      }
+    },
+    "core": {
+      "inputs": {
+        "disko": "disko",
+        "nixpkgs": [
+          "omaarvio",
+          "nixpkgs"
+        ],
+        "nixpkgs-2505": "nixpkgs-2505",
+        "nixpkgs-latest-unstable": "nixpkgs-latest-unstable"
+      },
+      "locked": {
+        "path": "./core",
+        "type": "path"
+      },
+      "original": {
+        "path": "./core",
+        "type": "path"
+      },
+      "parent": [
+        "omaarvio"
+      ]
+    },
+    "disko": {
+      "inputs": {
+        "nixpkgs": [
+          "omaarvio",
+          "core",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1779699611,
+        "narHash": "sha256-EcCaSTKnmg2o4wLKaN1aqQFomwyhO7ik0bX9COdyCas=",
+        "owner": "nix-community",
+        "repo": "disko",
+        "rev": "5ba0c9555c28685e57fa54c7a25e42c7efdbfc8d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "disko",
+        "type": "github"
+      }
+    },
+    "disko_2": {
+      "inputs": {
+        "nixpkgs": [
+          "omaarvio",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1764110879,
+        "narHash": "sha256-xanUzIb0tf3kJ+PoOFmXEXV1jM3PjkDT/TQ5DYeNYRc=",
+        "owner": "nix-community",
+        "repo": "disko",
+        "rev": "aecba248f9a7d68c5d1ed15de2d1c8a4c994a3c5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "disko",
+        "type": "github"
+      }
+    },
+    "dlio-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1789892251,
+        "narHash": "sha256-99hfCbO18OphUIzX/EN5cVselPkOoksDPXSpRQTJGBA=",
+        "owner": "TUM-DSE",
+        "repo": "DLIO-CVM-Store",
+        "rev": "7cdff7c3cef93a98e2f1544c3c99ae531e4c9ee2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TUM-DSE",
+        "ref": "cvm-store",
+        "repo": "DLIO-CVM-Store",
+        "type": "github"
+      }
+    },
+    "dpdk-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1768504152,
+        "narHash": "sha256-9Vo+eZPubgsrRvpC6XPrCv++1Rdnbn7/JSN2ZjHflPw=",
+        "owner": "TUM-DSE",
+        "repo": "dpdk",
+        "rev": "0438248f83d018cb3ca362c253fa8d5c378370ce",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TUM-DSE",
+        "ref": "cvm-dev-mempool",
+        "repo": "dpdk",
+        "type": "github"
+      }
+    },
+    "dpdk-src_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1774978958,
+        "narHash": "sha256-i1+wRbypbSldicGXSe4YXI3NbDA9K0rYdy+R8XX2aXs=",
+        "owner": "DPDK",
+        "repo": "dpdk",
+        "rev": "0e093f95276d0a152abcdd373dd580bd4e07e7f5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DPDK",
+        "ref": "v26.03",
+        "repo": "dpdk",
+        "type": "github"
+      }
+    },
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1761588595,
+        "narHash": "sha256-XKUZz9zewJNUj46b4AJdiRZJAvSZ0Dqj2BNfXvFlJC4=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "f387cd2afec9419c8ee37694406ca490c3f34ee5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "gitignore": {
+      "inputs": {
+        "nixpkgs": [
+          "omaarvio",
+          "pre-commit-hooks",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1709087332,
+        "narHash": "sha256-HG2cCnktfHsKV0s4XW83gU3F57gaTljL9KNSuG6bnQs=",
+        "owner": "hercules-ci",
+        "repo": "gitignore.nix",
+        "rev": "637db329424fd7e46cf4185293b9cc8c88c95394",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "gitignore.nix",
+        "type": "github"
+      }
+    },
+    "mlperf-base-image": {
+      "flake": false,
+      "locked": {
+        "path": "./nix/mlperf/base-image-placeholder",
+        "type": "path"
+      },
+      "original": {
+        "path": "./nix/mlperf/base-image-placeholder",
+        "type": "path"
+      },
+      "parent": [
+        "mod-accelstore"
+      ]
+    },
+    "mlperf-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1789892163,
+        "narHash": "sha256-9zgwn3+d4q69gkjB6EnyQREV56mat4fjPyssJ7+XoBY=",
+        "owner": "TUM-DSE",
+        "repo": "MLPerf-CVM-Store",
+        "rev": "a720cf7fd6ee1901e417db4eee40f66141658a50",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TUM-DSE",
+        "ref": "cvm-store",
+        "repo": "MLPerf-CVM-Store",
+        "type": "github"
+      }
+    },
+    "mod-accelstore": {
+      "inputs": {
+        "accelstore-src": "accelstore-src",
+        "core": [
+          "core"
+        ],
+        "crypto": [
+          "mod-crypto"
+        ],
+        "dlio-src": "dlio-src",
+        "dpdk-spdk": [
+          "mod-dpdk-spdk"
+        ],
+        "fio": [
+          "mod-fio"
+        ],
+        "mlperf-base-image": "mlperf-base-image",
+        "mlperf-src": "mlperf-src",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nixpkgs-kernel-617": "nixpkgs-kernel-617",
+        "nvme": [
+          "mod-nvme"
+        ],
+        "redis-src": "redis-src"
+      },
+      "locked": {
+        "path": "./modules/accelstore",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/accelstore",
+        "type": "path"
+      },
+      "parent": []
+    },
+    "mod-attestation": {
+      "inputs": {
+        "core": [
+          "core"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./modules/attestation",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/attestation",
+        "type": "path"
+      },
+      "parent": []
+    },
+    "mod-crypto": {
+      "inputs": {
+        "core": [
+          "omaarvio",
+          "core"
+        ],
+        "nixpkgs": [
+          "omaarvio",
+          "nixpkgs"
+        ],
+        "nixpkgs-openssl": "nixpkgs-openssl"
+      },
+      "locked": {
+        "path": "./modules/crypto",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/crypto",
+        "type": "path"
+      },
+      "parent": [
+        "omaarvio"
+      ]
+    },
+    "mod-dpdk-spdk": {
+      "inputs": {
+        "core": [
+          "core"
+        ],
+        "dpdk-src": [
+          "dpdk-src"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "spdk-src": [
+          "spdk-src"
+        ]
+      },
+      "locked": {
+        "dir": "modules/dpdk_spdk",
+        "lastModified": 1789902784,
+        "narHash": "sha256-ZyqIQpNFaE+0zwgaDW8cpd5Dg8shLTzGg2pZIjdoemw=",
+        "owner": "TUM-DSE",
+        "repo": "OmaArvio",
+        "rev": "736761a5efd43dadb3ef39b524d9a472f4d3fc30",
+        "type": "github"
+      },
+      "original": {
+        "dir": "modules/dpdk_spdk",
+        "owner": "TUM-DSE",
+        "repo": "OmaArvio",
+        "type": "github"
+      }
+    },
+    "mod-dpdk-spdk_2": {
+      "inputs": {
+        "core": [
+          "omaarvio",
+          "core"
+        ],
+        "dpdk-src": "dpdk-src_2",
+        "nixpkgs": [
+          "omaarvio",
+          "nixpkgs"
+        ],
+        "spdk-src": "spdk-src_2"
+      },
+      "locked": {
+        "path": "./modules/dpdk_spdk",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/dpdk_spdk",
+        "type": "path"
+      },
+      "parent": [
+        "omaarvio"
+      ]
+    },
+    "mod-fio": {
+      "inputs": {
+        "core": [
+          "core"
+        ],
+        "dpdk-spdk": [
+          "mod-dpdk-spdk"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nvme": [
+          "mod-nvme"
+        ]
+      },
+      "locked": {
+        "dir": "modules/fio",
+        "lastModified": 1789902784,
+        "narHash": "sha256-ZyqIQpNFaE+0zwgaDW8cpd5Dg8shLTzGg2pZIjdoemw=",
+        "owner": "TUM-DSE",
+        "repo": "OmaArvio",
+        "rev": "736761a5efd43dadb3ef39b524d9a472f4d3fc30",
+        "type": "github"
+      },
+      "original": {
+        "dir": "modules/fio",
+        "owner": "TUM-DSE",
+        "repo": "OmaArvio",
+        "type": "github"
+      }
+    },
+    "mod-fio_2": {
+      "inputs": {
+        "core": [
+          "omaarvio",
+          "core"
+        ],
+        "dpdk-spdk": [
+          "omaarvio",
+          "mod-dpdk-spdk"
+        ],
+        "nixpkgs": [
+          "omaarvio",
+          "nixpkgs"
+        ],
+        "nvme": [
+          "omaarvio",
+          "mod-nvme"
+        ]
+      },
+      "locked": {
+        "path": "./modules/fio",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/fio",
+        "type": "path"
+      },
+      "parent": [
+        "omaarvio"
+      ]
+    },
+    "mod-gdsio": {
+      "inputs": {
+        "core": [
+          "omaarvio",
+          "core"
+        ],
+        "mod-nvidia-cc": [
+          "omaarvio",
+          "mod-nvidia-cc"
+        ],
+        "nixpkgs": [
+          "omaarvio",
+          "nixpkgs"
+        ],
+        "nvme": [
+          "omaarvio",
+          "mod-nvme"
+        ]
+      },
+      "locked": {
+        "path": "./modules/gdsio",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/gdsio",
+        "type": "path"
+      },
+      "parent": [
+        "omaarvio"
+      ]
+    },
+    "mod-nvbandwidth": {
+      "inputs": {
+        "core": [
+          "omaarvio",
+          "core"
+        ],
+        "mod-nvidia-cc": [
+          "omaarvio",
+          "mod-nvidia-cc"
+        ],
+        "nixpkgs": [
+          "omaarvio",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./modules/nvbandwidth",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/nvbandwidth",
+        "type": "path"
+      },
+      "parent": [
+        "omaarvio"
+      ]
+    },
+    "mod-nvidia-cc": {
+      "inputs": {
+        "core": [
+          "omaarvio",
+          "core"
+        ],
+        "nixpkgs": [
+          "omaarvio",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./modules/nvidia_cc",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/nvidia_cc",
+        "type": "path"
+      },
+      "parent": [
+        "omaarvio"
+      ]
+    },
+    "mod-nvme": {
+      "inputs": {
+        "core": [
+          "core"
+        ],
+        "dpdk-spdk": [
+          "mod-dpdk-spdk"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "modules/nvme",
+        "lastModified": 1789902784,
+        "narHash": "sha256-ZyqIQpNFaE+0zwgaDW8cpd5Dg8shLTzGg2pZIjdoemw=",
+        "owner": "TUM-DSE",
+        "repo": "OmaArvio",
+        "rev": "736761a5efd43dadb3ef39b524d9a472f4d3fc30",
+        "type": "github"
+      },
+      "original": {
+        "dir": "modules/nvme",
+        "owner": "TUM-DSE",
+        "repo": "OmaArvio",
+        "type": "github"
+      }
+    },
+    "mod-nvme_2": {
+      "inputs": {
+        "core": [
+          "omaarvio",
+          "core"
+        ],
+        "dpdk-spdk": [
+          "omaarvio",
+          "mod-dpdk-spdk"
+        ],
+        "nixpkgs": [
+          "omaarvio",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./modules/nvme",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/nvme",
+        "type": "path"
+      },
+      "parent": [
+        "omaarvio"
+      ]
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1770562336,
+        "narHash": "sha256-ub1gpAONMFsT/GU2hV6ZWJjur8rJ6kKxdm9IlCT0j84=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "d6c71932130818840fc8fe9509cf50be8c64634f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-2505": {
+      "locked": {
+        "lastModified": 1767313136,
+        "narHash": "sha256-16KkgfdYqjaeRGBaYsNrhPRRENs0qzkQVUooNHtoy2w=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ac62194c3917d5f474c1a844b6fd6da2db95077d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-kernel-617": {
+      "locked": {
+        "lastModified": 1766069213,
+        "narHash": "sha256-h2501PoQofwr3Ds/O/SHlm/izeKWqnRYuT7Yl5t6ZVI=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "52e64396e98aef211f4127416dbdae17a01b3d3f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "52e64396e98aef211f4127416dbdae17a01b3d3f",
+        "type": "github"
+      }
+    },
+    "nixpkgs-latest-unstable": {
+      "locked": {
+        "lastModified": 1787070829,
+        "narHash": "sha256-vXNVDVtvfiQuXthP0NHPFdNvvMTkGpx0UP8oddIWbNk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0ae2bc1419c3f345984c2629e72e7a631820fa4d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-openssl": {
+      "locked": {
+        "lastModified": 1764242076,
+        "narHash": "sha256-sKoIWfnijJ0+9e4wRvIgm/HgE27bzwQxcEmo2J/gNpI=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2fad6eac6077f03fe109c4d4eb171cf96791faa4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2fad6eac6077f03fe109c4d4eb171cf96791faa4",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1780749050,
+        "narHash": "sha256-3av0pIjlOWQ6rDbNOmpUSvbNnJkGORQKKjb4LtCZsIY=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "a799d3e3886da994fa307f817a6bc705ae538eeb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1759417375,
+        "narHash": "sha256-O7eHcgkQXJNygY6AypkF9tFhsoDQjpNEojw3eFs73Ow=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "dc704e6102e76aad573f63b74c742cd96f8f1e6c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "omaarvio": {
+      "inputs": {
+        "core": "core",
+        "disko": "disko_2",
+        "flake-utils": "flake-utils",
+        "mod-crypto": "mod-crypto",
+        "mod-dpdk-spdk": "mod-dpdk-spdk_2",
+        "mod-fio": "mod-fio_2",
+        "mod-gdsio": "mod-gdsio",
+        "mod-nvbandwidth": "mod-nvbandwidth",
+        "mod-nvidia-cc": "mod-nvidia-cc",
+        "mod-nvme": "mod-nvme_2",
+        "nixpkgs": "nixpkgs_2",
+        "pre-commit-hooks": "pre-commit-hooks"
+      },
+      "locked": {
+        "lastModified": 1789902784,
+        "narHash": "sha256-ZyqIQpNFaE+0zwgaDW8cpd5Dg8shLTzGg2pZIjdoemw=",
+        "ref": "refs/heads/main",
+        "rev": "736761a5efd43dadb3ef39b524d9a472f4d3fc30",
+        "revCount": 61,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/TUM-DSE/OmaArvio.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/TUM-DSE/OmaArvio.git"
+      }
+    },
+    "pre-commit-hooks": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "gitignore": "gitignore",
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1763988335,
+        "narHash": "sha256-QlcnByMc8KBjpU37rbq5iP7Cp97HvjRP0ucfdh+M4Qc=",
+        "owner": "cachix",
+        "repo": "pre-commit-hooks.nix",
+        "rev": "50b9238891e388c9fdc6a5c49e49c42533a1b5ce",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cachix",
+        "repo": "pre-commit-hooks.nix",
+        "type": "github"
+      }
+    },
+    "redis-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1789918782,
+        "narHash": "sha256-nvuy2O4/rFndrM+aDqZKeiB3hUMi+Rkf5mkzu6D/89M=",
+        "owner": "TUM-DSE",
+        "repo": "redis-CVM-Store",
+        "rev": "ae94d6363649adc5a5389d348dbb0d5c252e0e10",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TUM-DSE",
+        "ref": "cvm-store",
+        "repo": "redis-CVM-Store",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "core": [
+          "omaarvio",
+          "core"
+        ],
+        "dpdk-src": "dpdk-src",
+        "flake-utils": [
+          "omaarvio",
+          "flake-utils"
+        ],
+        "mod-accelstore": "mod-accelstore",
+        "mod-attestation": "mod-attestation",
+        "mod-crypto": [
+          "omaarvio",
+          "mod-crypto"
+        ],
+        "mod-dpdk-spdk": "mod-dpdk-spdk",
+        "mod-fio": "mod-fio",
+        "mod-nvme": "mod-nvme",
+        "nixpkgs": [
+          "omaarvio",
+          "nixpkgs"
+        ],
+        "omaarvio": "omaarvio",
+        "pre-commit-hooks": [
+          "omaarvio",
+          "pre-commit-hooks"
+        ],
+        "spdk-src": "spdk-src_3"
+      }
+    },
+    "spdk-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1770610063,
+        "narHash": "sha256-0ZHHhq1fR+AiTdmAPT3wW+gzsQS71CwgWsyK78TWdy0=",
+        "ref": "refs/heads/master",
+        "rev": "4b3851978f28c44d5cdf8133a48e5c241ee6b875",
+        "revCount": 23951,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/spdk/spdk.git"
+      },
+      "original": {
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/spdk/spdk.git"
+      }
+    },
+    "spdk-src_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1769778772,
+        "narHash": "sha256-E52VozjnoGnIC7viXrsualaaKXiUU9Fx8zGylTjBzX0=",
+        "ref": "refs/tags/v26.01",
+        "rev": "2ef883ef96e79c3cc16da02f667a7a58c2453f2f",
+        "revCount": 23915,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/spdk/spdk"
+      },
+      "original": {
+        "ref": "refs/tags/v26.01",
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/spdk/spdk"
+      }
+    },
+    "spdk-src_3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1770627153,
+        "narHash": "sha256-XTgmRmPMeCKNpnyzOyReTxuzOp3VAhZPxbZDl9J89m4=",
+        "ref": "cvm-dev-master-hardend",
+        "rev": "ee36059b89bb5ff42485123b4333a8025370adee",
+        "revCount": 23952,
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/TUM-DSE/spdk.git"
+      },
+      "original": {
+        "ref": "cvm-dev-master-hardend",
+        "submodules": true,
+        "type": "git",
+        "url": "https://github.com/TUM-DSE/spdk.git"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

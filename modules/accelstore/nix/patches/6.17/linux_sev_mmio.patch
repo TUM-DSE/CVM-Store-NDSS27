@@ -1,0 +1,15 @@
+--- a/arch/x86/coco/sev/vc-handle.c
++++ b/arch/x86/coco/sev/vc-handle.c
+@@ -583,8 +583,10 @@ static enum es_result vc_handle_mmio(struct ghcb *ghcb, struct es_em_ctxt *ctxt)
+ 			return ES_DECODE_FAILED;
+ 	}
+ 
+-	if (user_mode(ctxt->regs))
+-		return ES_UNSUPPORTED;
++	// Reenable user space MMIO temporaily, to see if the rest works
++	// This open up a CVE! See: https://blog.freax13.de/cve/cve-2023-46813
++	// if (user_mode(ctxt->regs))
++	//	return ES_UNSUPPORTED;
+ 
+ 	switch (mmio) {
+ 	case INSN_MMIO_WRITE:
