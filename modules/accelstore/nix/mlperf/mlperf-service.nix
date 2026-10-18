@@ -15,7 +15,7 @@ let
       image=${escapeShellArg imageRef}
       staging="mlperf-load:unverified"
       archive=${escapeShellArg dockerImagePkg}
-      verify=${escapeShellArg ./verify-image.py}
+      verify=${./verify-image.py}
 
       restage() {
         if docker image inspect "$image" >/dev/null 2>&1; then
@@ -28,10 +28,15 @@ let
         docker rmi "$1" >/dev/null 2>&1 || true
       }
 
+      if [ ! -r "$verify" ]; then
+        echo "mlperf: verifier $verify is missing; refusing to load $image" >&2
+        exit 1
+      fi
+
       verified() {
         local rc=0
         python3 "$verify" "$1" || rc=$?
-        if [ "$rc" -eq 2 ]; then
+        if [ "$rc" -eq 3 ]; then
           echo "mlperf: $image could not be verified; accepting it unchecked" >&2
           return 0
         fi

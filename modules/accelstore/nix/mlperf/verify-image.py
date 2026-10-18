@@ -7,7 +7,7 @@ means the layers must be dropped so the next load re-extracts them.
 Exit status:
     0  every layer matches
     1  at least one layer does not: the image is corrupt
-    2  nothing could be checked (unsupported storage driver, no layerdb)
+    3  nothing could be checked (unsupported storage driver, no layerdb)
 """
 
 import argparse
@@ -21,7 +21,7 @@ DOCKER_ROOT_DEFAULT = "/var/lib/docker"
 
 EXIT_OK = 0
 EXIT_CORRUPT = 1
-EXIT_UNCHECKABLE = 2
+EXIT_UNCHECKABLE = 3
 
 SUPPORTED_DRIVER = "overlay2"
 
