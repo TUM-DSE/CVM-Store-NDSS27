@@ -6,11 +6,11 @@
         "spdk-src": "spdk-src"
       },
       "locked": {
-        "lastModified": 1789935671,
-        "narHash": "sha256-XI7CYYNdwVsxUJdesl8PkucTHzGjHdoN/6o3jvSEA9Y=",
+        "lastModified": 1792318428,
+        "narHash": "sha256-p6kBzJgYzszJBz76zGaqw/hl8JDU5bDciLBvNz0PQv0=",
         "owner": "TUM-DSE",
         "repo": "CVM-Store",
-        "rev": "15a538d561fe30b84d3fbac7b6e991372f4d6369",
+        "rev": "3d69c09616f346381d647cb6537cdbd2f45cffc8",
         "type": "github"
       },
       "original": {
@@ -808,11 +808,11 @@
     "spdk-src_3": {
       "flake": false,
       "locked": {
-        "lastModified": 1770627153,
-        "narHash": "sha256-XTgmRmPMeCKNpnyzOyReTxuzOp3VAhZPxbZDl9J89m4=",
+        "lastModified": 1792324436,
+        "narHash": "sha256-56yrloFT3VCfcKkegQurIWAahFpOtXmAxG3ZBh+5jLo=",
         "ref": "cvm-dev-master-hardend",
-        "rev": "ee36059b89bb5ff42485123b4333a8025370adee",
-        "revCount": 23952,
+        "rev": "b2a0000acf4b983af22a3dbbd5cfe213edf2af10",
+        "revCount": 23953,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/TUM-DSE/spdk.git"

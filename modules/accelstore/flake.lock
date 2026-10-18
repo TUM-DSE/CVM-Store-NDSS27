@@ -6,11 +6,11 @@
         "spdk-src": "spdk-src"
       },
       "locked": {
-        "lastModified": 1789935671,
-        "narHash": "sha256-XI7CYYNdwVsxUJdesl8PkucTHzGjHdoN/6o3jvSEA9Y=",
+        "lastModified": 1792318428,
+        "narHash": "sha256-p6kBzJgYzszJBz76zGaqw/hl8JDU5bDciLBvNz0PQv0=",
         "owner": "TUM-DSE",
         "repo": "CVM-Store",
-        "rev": "15a538d561fe30b84d3fbac7b6e991372f4d6369",
+        "rev": "3d69c09616f346381d647cb6537cdbd2f45cffc8",
         "type": "github"
       },
       "original": {
