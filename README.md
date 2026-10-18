@@ -190,3 +190,9 @@ Main software components included via the flakes:
 - [TUM-DSE/dpdk](https://github.com/TUM-DSE/dpdk) and [TUM-DSE/spdk](https://github.com/TUM-DSE/spdk): the CVM-enabled DPDK and SPDK forks
 - [TUM-DSE/redis-CVM-Store](https://github.com/TUM-DSE/redis-CVM-Store): Redis with CVM-Store persistence
 - [TUM-DSE/MLPerf-CVM-Store](https://github.com/TUM-DSE/MLPerf-CVM-Store) and [TUM-DSE/DLIO-CVM-Store](https://github.com/TUM-DSE/DLIO-CVM-Store): MLPerf Storage checkpointing on CVM-Store
+
+## License
+
+This repository is licensed under the [Apache License 2.0](LICENSE). For the
+patches in `modules/accelstore/nix/patches/` a: kernel patches GPL-2.0 and SPDK
+BSD-3-Clause.
